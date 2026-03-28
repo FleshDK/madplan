@@ -2,123 +2,115 @@ import { useState } from "react";
 
 const madplan = [
   {
-    day: "Mandag", emoji: "🥩", meal: "Oksemørbrad med stegte kartofler, skysovs og whiskeysovs",
+    day: "Mandag", dato: "30. marts", emoji: "🍝", meal: "Spagetti bolognese med frisk salat",
     color: "#fdf2f8", accent: "#8e44ad",
-    gaester: true,
     naering: {
-      hel: { kcal: 3000, protein: 220, kulhy: 140, fedt: 152 },
-      portion: { kcal: 750, protein: 55, kulhy: 35, fedt: 38 },
+      hel: { kcal: 2720, protein: 168, kulhy: 288, fedt: 96 },
+      portion: { kcal: 680, protein: 42, kulhy: 72, fedt: 24 },
     },
     recipe: {
-      tid: "60 min", sværhed: "Medium",
-      intro: "Gæstemiddag! Oksemørbrad er det ypperste — mørt, saftigt og imponerende. To sovse: en klassisk skysovs og en cremet whiskeysovs. Lav lidt ekstra — resterne er guld dagen efter.",
+      tid: "40 min", sværhed: "Let",
+      intro: "Klassisk og nem mandag! Lav DOBBELT portion kødsovs — den halve del bruges til lasagne tirsdag. Smart madlavning der sparer tid og penge.",
       trin: [
-        "Tag mørbraden ud af køleskabet 30 min før tilberedning. Dup den tør og krydr generøst med salt og peber.",
-        "Brun mørbraden på alle sider i smør og olie ved høj varme — ca. 2 min per side til gylden stegeskorpe.",
-        "Tilsæt hvidløg, timian og rosmarin til panden. Sæt i ovn ved 180° i 15-20 min til kernetemperatur 58-60°. Hvil 10 min.",
-        "STEGTE KARTOFLER: Kog kartofler halvt møre (10 min). Afkøl, skær i kvarte. Steg i smør ved middel-høj varme til gyldne og sprøde — ca. 15 min.",
-        "SKYSOVS: Sigt stegeskyen fra panden. Reducer med oksefond til det halve. Smag til med salt, peber og en klat koldt smør til sidst — ryst ikke panden.",
-        "WHISKEYSOVS: Svits finthakkede skalotteløg bløde i smør. Tilsæt whisky og lad det fordampe 1 min. Tilsæt fløde og lad simre 5 min til sovsen tykner. Smag til med dijonsennep, salt og peber.",
-        "Skær mørbraden i tykke skiver og server med de stegte kartofler og begge sovse ved siden af.",
+        "Hak løg og hvidløg fint. Svits i olivenolie i en stor gryde ved middel varme i 5 min.",
+        "Tilsæt hakket oksekød (al 800g!) og brun grundigt — rør det fra hinanden så det ikke klumper.",
+        "Tilsæt tomatpuré og rør 1 min. Tilsæt hakkede tomater, oregano og basilikum.",
+        "Lad sovsen simre ved lav varme i mindst 20 min — jo længere jo bedre. Smag til med salt og peber.",
+        "Kog spagetti i rigeligt saltet vand efter pakken — al dente!",
+        "Gem halvdelen af kødsovsen til tirsdag (sæt i køleskab eller frys).",
+        "Server spagetti med bolognese og en frisk salat med agurk og tomater.",
       ],
-      sovse: {
-        skysovs: "Stegeskyen sigtes og reduceres med oksefond. Smages til med salt, peber og en klat smør.",
-        whiskeysovs: "Skalotteløg sauteres, whisky tilsættes og fordamper, fløde tilsættes og reduceres. Smages til med dijonsennep.",
-      }
     },
     ingredients: [
-      { name: "Oksemørbrad", qty: "1,2 kg", url: "https://www.bilkatogo.dk/s/?search=oksem%C3%B8rbrad" },
-      { name: "Kartofler", qty: "1,2 kg", url: "https://www.bilkatogo.dk/s/?search=kartofler" },
-      { name: "Smør", qty: "100g", url: "https://www.bilkatogo.dk/s/?search=sm%C3%B8r" },
+      { name: "Hakket oksekød", qty: "800g (til 2 dage)", url: "https://www.bilkatogo.dk/s/?search=hakket+oksek%C3%B8d" },
+      { name: "Spagetti", qty: "500g", url: "https://www.bilkatogo.dk/s/?search=spagetti" },
+      { name: "Hakkede tomater (dåse)", qty: "2 dåser", url: "https://www.bilkatogo.dk/s/?search=hakkede+tomater" },
+      { name: "Løg", qty: "2 stk", url: "https://www.bilkatogo.dk/s/?search=l%C3%B8g" },
       { name: "Hvidløg", qty: "4 fed", url: "https://www.bilkatogo.dk/s/?search=hvidl%C3%B8g" },
-      { name: "Timian + rosmarin", qty: "friske kviste", url: "https://www.bilkatogo.dk/s/?search=timian" },
-      { name: "Oksefond", qty: "4 dl", url: "https://www.bilkatogo.dk/s/?search=oksefond" },
-      { name: "Whisky", qty: "4 cl", url: "https://www.bilkatogo.dk/s/?search=whisky" },
-      { name: "Fløde 38%", qty: "2 dl", url: "https://www.bilkatogo.dk/s/?search=fl%C3%B8de" },
-      { name: "Skalotteløg", qty: "4 stk", url: "https://www.bilkatogo.dk/s/?search=skalottel%C3%B8g" },
-      { name: "Dijonsennep", qty: "1 spsk", url: "https://www.bilkatogo.dk/s/?search=dijonsennep" },
+      { name: "Tomatpuré", qty: "2 spsk", url: "https://www.bilkatogo.dk/s/?search=tomatpur%C3%A9" },
+      { name: "Olivenolie", qty: "3 spsk", url: "https://www.bilkatogo.dk/s/?search=olivenolie" },
+      { name: "Oregano + basilikum", qty: "tørret", url: "https://www.bilkatogo.dk/s/?search=oregano" },
+      { name: "Blandede salater", qty: "1 pose", url: "https://www.bilkatogo.dk/s/?search=salat" },
+      { name: "Agurk + tomater", qty: "til salat", url: "https://www.bilkatogo.dk/s/?search=agurk" },
     ]
   },
   {
-    day: "Tirsdag", emoji: "🥗", meal: "Mørbrad-sandwich med rester + ovnkartofler",
+    day: "Tirsdag", dato: "31. marts", emoji: "🫕", meal: "Bolognese-lasagne med rester fra mandag",
     color: "#eafaf1", accent: "#27ae60",
     rester: true, resterFra: "Mandag",
     naering: {
-      hel: { kcal: 2320, protein: 168, kulhy: 192, fedt: 88 },
-      portion: { kcal: 580, protein: 42, kulhy: 48, fedt: 22 },
+      hel: { kcal: 2480, protein: 152, kulhy: 232, fedt: 88 },
+      portion: { kcal: 620, protein: 38, kulhy: 58, fedt: 22 },
     },
     recipe: {
-      tid: "20 min", sværhed: "Let",
-      intro: "Geniale rester fra gæstemiddagen! Kold oksemørbrad skåret i tynde skiver er en delikatesse i sig selv. Med godt brød, sennep og syltede løg er det bedre end de fleste smørrebrød.",
+      tid: "30 min", sværhed: "Let",
+      intro: "Genbrug er smart! Mandagens bolognese bliver til en lækker lasagne. Ingen ekstra madlavning af kødsovsen — den er allerede perfekt.",
       trin: [
-        "Tag mørbraden ud af køleskabet 15 min før servering — den må ikke være iskold.",
-        "Skær mørbraden i tynde skiver på skrå — brug en skarp kniv.",
-        "Forvarm ovnen til 200°. Skær evt. resterende kartofler i tern og bag i 15 min med lidt olie og salt.",
-        "Rist brødet let i brødristeren eller på en tør pande.",
-        "Byg sandwichen: smør dijonsennep eller peberrod på brødet, læg salat, mørbradskiver og rødløg.",
-        "Server med ovnkartoflerne og et godt glas vand — eller et glas af whiskyen fra i går 😄",
-      ]
+        "Forvarm ovnen til 180°.",
+        "Tag bolognesen fra køleskabet og varm den kort op i en gryde.",
+        "Lav simpel bechamelsovs: smelt smør, tilsæt mel, pisk mælk i lidt ad gangen til en tyk sovs. Smag til med salt, peber og muskatnød.",
+        "Byg lasagnen i et ovnfast fad: bolognese → lasagneplader → bechamel → gentag. Slut med bechamel på toppen.",
+        "Bag i ovnen i 25-30 min til lasagnepladerne er møre og toppen er gylden.",
+        "Lad hvile 5 min inden servering — så er det nemmere at skære.",
+      ],
     },
     ingredients: [
-      { name: "Oksemørbrad (rester fra mandag)", qty: "ca. 400g", url: "https://www.bilkatogo.dk/s/?search=oksem%C3%B8rbrad" },
-      { name: "Godt brød eller baguette", qty: "1 stk", url: "https://www.bilkatogo.dk/s/?search=baguette" },
-      { name: "Kartofler (rester fra mandag)", qty: "efter behov", url: "https://www.bilkatogo.dk/s/?search=kartofler" },
-      { name: "Dijonsennep", qty: "til servering", url: "https://www.bilkatogo.dk/s/?search=dijonsennep" },
-      { name: "Peberrod", qty: "til servering", url: "https://www.bilkatogo.dk/s/?search=peberrod" },
-      { name: "Rødløg", qty: "1 stk", url: "https://www.bilkatogo.dk/s/?search=r%C3%B8dl%C3%B8g" },
-      { name: "Blandede salater", qty: "1 pose", url: "https://www.bilkatogo.dk/s/?search=salat" },
+      { name: "Bolognese (rester fra mandag)", qty: "ca. 600g", url: "https://www.bilkatogo.dk/s/?search=hakket+oksek%C3%B8d" },
+      { name: "Lasagneplader", qty: "1 pk", url: "https://www.bilkatogo.dk/s/?search=lasagneplader" },
+      { name: "Smør (Lurpak — tilbud!)", qty: "50g", url: "https://www.bilkatogo.dk/s/?search=lurpak" },
+      { name: "Hvedemel", qty: "3 spsk", url: "https://www.bilkatogo.dk/s/?search=hvedemel" },
+      { name: "Mælk", qty: "5 dl", url: "https://www.bilkatogo.dk/s/?search=m%C3%A6lk" },
+      { name: "Muskatnød", qty: "lidt", url: "https://www.bilkatogo.dk/s/?search=muskatn%C3%B8d" },
     ]
   },
   {
-    day: "Onsdag", emoji: "🐔", meal: "Ovnstegt kylling med rodfrugtgryde",
+    day: "Onsdag", dato: "1. april", emoji: "🐔", meal: "Ovnstegt kyllingelår med kartofler og grøntsager",
     color: "#fef9e7", accent: "#e67e22",
     naering: {
-      hel: { kcal: 2600, protein: 192, kulhy: 160, fedt: 112 },
-      portion: { kcal: 650, protein: 48, kulhy: 40, fedt: 28 },
+      hel: { kcal: 2720, protein: 208, kulhy: 168, fedt: 120 },
+      portion: { kcal: 680, protein: 52, kulhy: 42, fedt: 30 },
     },
     recipe: {
       tid: "60 min", sværhed: "Let",
-      intro: "En hel ovnkylling med sæsonens rodfrugter — enkel, velsmagende og fylder hele huset med duft. Lav en stor kylling så der er rester til torsdag.",
+      intro: "⚠️ Husk at handle ind i dag — Bilka er LUKKET torsdag og fredag! Ovnkyllingelår er ukompliceret og lækre. Lav mange stk. til wraps torsdag.",
       trin: [
-        "Forvarm ovnen til 200°. Gnid kyllingen indvendigt og udvendigt med salt, peber og smør.",
-        "Stik hvidløgshoved, timian og rosmarin ind i kyllingen.",
-        "Skær gulerødder, kartofler og selleri i grove stykker. Læg i bradepanden med lidt olie, salt og peber.",
-        "Læg kyllingen ovenpå grøntsagerne med brystsiden opad.",
-        "Bag i ovnen i 50-60 min til kyllingen er gylden og saften løber klar (stik i låret).",
-        "Lad kyllingen hvile 10 min inden servering. Server med grøntsagerne fra bradepanden.",
-        "Gem de overskydende kyllingestykker til torsdag — pil kødet fra benene og opbevar i køleskabet.",
-      ]
+        "Forvarm ovnen til 200°. Krydr kyllingelårene generøst med salt, peber, paprika og timian.",
+        "Skær kartofler i kvarte og gulerødder i stave. Læg i bradepanden med løg og hvidløg.",
+        "Dryp grøntsagerne med olie, salt og peber. Læg kyllingelårene ovenpå.",
+        "Smelt smør og pensl kyllingelårene — giver sprød og gylden overflade.",
+        "Bag i ovnen i 45-50 min til kyllingen er gennemstegt og huden er sprød.",
+        "Gem mindst 3-4 stk. kyllingelår til torsdag — pil evt. kødet allerede nu.",
+      ],
     },
     ingredients: [
-      { name: "Hel kylling", qty: "1,4 kg", url: "https://www.bilkatogo.dk/s/?search=hel+kylling" },
+      { name: "Kyllingelår", qty: "6-8 stk (ca. 1,4 kg)", url: "https://www.bilkatogo.dk/s/?search=kyllingel%C3%A5r" },
+      { name: "Kartofler", qty: "1 kg", url: "https://www.bilkatogo.dk/s/?search=kartofler" },
       { name: "Gulerødder", qty: "4 stk", url: "https://www.bilkatogo.dk/s/?search=gulerod" },
-      { name: "Kartofler", qty: "800g", url: "https://www.bilkatogo.dk/s/?search=kartofler" },
-      { name: "Knoldselleri", qty: "½ stk", url: "https://www.bilkatogo.dk/s/?search=selleri" },
+      { name: "Løg", qty: "2 stk", url: "https://www.bilkatogo.dk/s/?search=l%C3%B8g" },
       { name: "Hvidløg", qty: "1 hoved", url: "https://www.bilkatogo.dk/s/?search=hvidl%C3%B8g" },
-      { name: "Timian + rosmarin", qty: "friske kviste", url: "https://www.bilkatogo.dk/s/?search=timian" },
-      { name: "Smør", qty: "50g", url: "https://www.bilkatogo.dk/s/?search=sm%C3%B8r" },
-      { name: "Olivenolie", qty: "3 spsk", url: "https://www.bilkatogo.dk/s/?search=olivenolie" },
+      { name: "Smør (Lurpak — tilbud!)", qty: "75g", url: "https://www.bilkatogo.dk/s/?search=lurpak" },
+      { name: "Paprika + timian", qty: "til krydderi", url: "https://www.bilkatogo.dk/s/?search=paprika" },
+      { name: "Citron", qty: "1 stk", url: "https://www.bilkatogo.dk/s/?search=citron" },
     ]
   },
   {
-    day: "Torsdag", emoji: "🌯", meal: "Kyllingewraps med rester fra ovnkylling",
+    day: "Torsdag", dato: "2. april — Skærtorsdag 🐣", emoji: "🌯", meal: "Kyllingewraps med rester fra onsdag",
     color: "#e8f4f8", accent: "#2980b9",
     rester: true, resterFra: "Onsdag",
     naering: {
-      hel: { kcal: 2320, protein: 160, kulhy: 220, fedt: 80 },
-      portion: { kcal: 580, protein: 40, kulhy: 55, fedt: 20 },
+      hel: { kcal: 2240, protein: 152, kulhy: 208, fedt: 72 },
+      portion: { kcal: 560, protein: 38, kulhy: 52, fedt: 18 },
     },
     recipe: {
       tid: "15 min", sværhed: "Let",
-      intro: "Restekyllingen fra onsdag forvandles til en frisk og nem torsdag. Pil kødet fra benene og sæt det hele på bordet — alle bygger selv!",
+      intro: "🐣 Skærtorsdag — Bilka er lukket! Heldigvis har vi restekyllingen fra i går. Pil kødet og sæt det hele på bordet — alle bygger selv!",
       trin: [
         "Pil kyllingekødet fra benene og riv det i strimler med fingrene.",
-        "Varm kyllingekødet kort op i en pande med lidt olie, eller server det koldt — begge dele virker.",
-        "Skær avocado i skiver og dryp med limesaft så den ikke bliver brun.",
-        "Varm tortillas i en tør pande i 30 sek per side, eller pak dem i et fugtigt viskestykke og varm i mikroovn.",
-        "Sæt det hele på bordet: kylling, avocado, salsa, creme fraiche, salat og tomater.",
-        "Lad alle bygge deres egne wraps og nyd den nemme torsdag! 🌯",
-      ]
+        "Varm kyllingestrimler kort i en pande med lidt smør — eller server koldt, det er også godt.",
+        "Skær avocado i skiver og dryp med limesaft.",
+        "Varm tortillas i en tør pande eller i mikro i fugtigt viskestykke.",
+        "Sæt det hele på bordet og lad alle bygge deres egne wraps. God påskeferie! 🌯",
+      ],
     },
     ingredients: [
       { name: "Kylling (rester fra onsdag)", qty: "ca. 500g", url: "https://www.bilkatogo.dk/s/?search=kylling" },
@@ -132,54 +124,53 @@ const madplan = [
     ]
   },
   {
-    day: "Fredag", emoji: "🍟", meal: "Fish & chips med remoulade",
+    day: "Fredag", dato: "3. april — Langfredag 🐣", emoji: "🐟", meal: "Marinerede sild med kartofler og rugbrød",
     color: "#fdedec", accent: "#c0392b",
     naering: {
-      hel: { kcal: 2840, protein: 152, kulhy: 260, fedt: 120 },
-      portion: { kcal: 710, protein: 38, kulhy: 65, fedt: 30 },
+      hel: { kcal: 2080, protein: 112, kulhy: 192, fedt: 88 },
+      portion: { kcal: 520, protein: 28, kulhy: 48, fedt: 22 },
     },
     recipe: {
-      tid: "35 min", sværhed: "Let",
-      intro: "Klassisk fredagsfisk! Sprødt paneret torsk med ovnfritter og remoulade. Enkel britisk-inspireret ret der altid falder i god jord.",
+      tid: "10 min", sværhed: "Let",
+      intro: "🐣 Langfredag — Bilka er lukket! Klassisk dansk påskefrokost med marinerede sild. Sildene er fra Bilkas tilbud denne uge. Enkelt og autentisk.",
       trin: [
-        "Forvarm ovnen til 220°. Skær kartofler i tykke stave. Vend i olie, salt, peber og lidt paprika.",
-        "Bag kartoflerne i ovnen i 25-30 min — vend dem halvvejs til alle sider er gyldne.",
-        "Skær fiskefileterne i passende stykker. Krydr med salt og peber.",
-        "Panér fisken: vend i mel, dernæst sammenpisket æg, og til sidst rasp. Tryk raspen godt fast.",
-        "Steg fisken i rigeligt olie på panden — 3-4 min per side til gylden og sprød.",
-        "Server med ovnfritter, remoulade, citronbåde og ærter.",
-      ]
+        "Kog kartofler møre i saltet vand — ca. 20 min (start dem gerne i god tid).",
+        "Skær rugbrød i tykke skiver og smør med rigeligt Lurpak (tilbud!).",
+        "Anret sild på tallerkener med kogte kartofler ved siden af.",
+        "Pil rødløg i ringe og læg ovenpå sildene. Tilsæt syltede agurker.",
+        "Server med ekstra smør og de friske druer (tilbud!) som dessert.",
+        "Skål! 🥂 God påske til hele familien.",
+      ],
     },
     ingredients: [
-      { name: "Torsk- eller sejfilet", qty: "700g", url: "https://www.bilkatogo.dk/s/?search=torsk+filet" },
-      { name: "Kartofler", qty: "1 kg", url: "https://www.bilkatogo.dk/s/?search=kartofler" },
-      { name: "Rasp", qty: "150g", url: "https://www.bilkatogo.dk/s/?search=rasp" },
-      { name: "Æg", qty: "2 stk", url: "https://www.bilkatogo.dk/s/?search=%C3%A6g" },
-      { name: "Hvedemel", qty: "til panering", url: "https://www.bilkatogo.dk/s/?search=hvedemel" },
-      { name: "Remoulade", qty: "1 glas", url: "https://www.bilkatogo.dk/s/?search=remoulade" },
-      { name: "Citron", qty: "1 stk", url: "https://www.bilkatogo.dk/s/?search=citron" },
-      { name: "Ærter (frost)", qty: "200g", url: "https://www.bilkatogo.dk/s/?search=%C3%A6rter+frost" },
+      { name: "Marinerede sild (Bilka tilbud!)", qty: "2 glas á 300g+", url: "https://www.bilkatogo.dk/s/?search=marinerede+sild" },
+      { name: "Kartofler", qty: "800g", url: "https://www.bilkatogo.dk/s/?search=kartofler" },
+      { name: "Rugbrød", qty: "1 brød", url: "https://www.bilkatogo.dk/s/?search=rugbr%C3%B8d" },
+      { name: "Smør (Lurpak tilbud!)", qty: "100g", url: "https://www.bilkatogo.dk/s/?search=lurpak" },
+      { name: "Løse druer (Bilka tilbud! 3,95/100g)", qty: "300g", url: "https://www.bilkatogo.dk/s/?search=druer" },
+      { name: "Syltede agurker", qty: "1 glas", url: "https://www.bilkatogo.dk/s/?search=syltede+agurker" },
+      { name: "Rødløg", qty: "1 stk", url: "https://www.bilkatogo.dk/s/?search=r%C3%B8dl%C3%B8g" },
     ]
   },
   {
-    day: "Lørdag", emoji: "🥩", meal: "Mørbradgryde med kartoffelmos",
+    day: "Lørdag", dato: "4. april — Påskelørdag", emoji: "🥩", meal: "Mørbradgryde med kartoffelmos",
     color: "#f4ecf7", accent: "#8e44ad",
     naering: {
-      hel: { kcal: 3000, protein: 208, kulhy: 192, fedt: 140 },
-      portion: { kcal: 750, protein: 52, kulhy: 48, fedt: 35 },
+      hel: { kcal: 3040, protein: 208, kulhy: 200, fedt: 144 },
+      portion: { kcal: 760, protein: 52, kulhy: 50, fedt: 36 },
     },
     recipe: {
       tid: "45 min", sværhed: "Medium",
-      intro: "Lørdagsforkælelse! En cremet mørbradgryde med champignon i flødesovs og luftig kartoffelmos. Lav ekstra mos — det bruges søndag.",
+      intro: "Bilka er åbent i dag (7-22) — stock op! Lørdag = lidt ekstra forkælelse. Cremet mørbradgryde med luftig kartoffelmos. LAV EKSTRA MOS — den bruges på påskedag!",
       trin: [
         "Skær svinemørbraden i medallioner på ca. 2 cm. Krydr med salt og peber.",
-        "Brun medallionerne i smør ved høj varme — 2 min per side til gyldne. Tag ud og sæt til side.",
+        "Brun medallionerne i smør (Lurpak!) ved høj varme — 2 min per side til gyldne. Tag ud.",
         "Svits løg og champignon i samme pande i 5 min til bløde og gyldne.",
-        "Tilsæt dijonsennep og rør rundt. Tilsæt fløden og lad simre 5 min.",
-        "Kom kødet tilbage i sovsen og lad simre ved lav varme i 5-10 min.",
-        "KARTOFFELMOS: Kog kartofler møre, hæld vandet fra. Mos med rigeligt smør og mælk til cremet og luftig mos. Smag til med salt og muskatnød.",
-        "Server gryden over den varme kartoffelmos. Gem ekstra mos til søndag!",
-      ]
+        "Tilsæt dijonsennep, rør rundt. Tilsæt fløden og lad simre 5 min til sovsen tykner.",
+        "Kom kødet tilbage og lad simre ved lav varme i 5-10 min. Drys med frisk persille.",
+        "KARTOFFELMOS: Kog kartofler møre, hæld vand fra. Mos med RIGELIGT smør og mælk til cremet mos. LAV 1,5 KG — gem resten til søndag!",
+        "Server mørbradgryden over den varme kartoffelmos. God påskelørdag! 🐣",
+      ],
     },
     ingredients: [
       { name: "Svinemørbrad", qty: "800g", url: "https://www.bilkatogo.dk/s/?search=svinem%C3%B8rbrad" },
@@ -187,32 +178,34 @@ const madplan = [
       { name: "Løg", qty: "2 stk", url: "https://www.bilkatogo.dk/s/?search=l%C3%B8g" },
       { name: "Fløde 38%", qty: "2 dl", url: "https://www.bilkatogo.dk/s/?search=fl%C3%B8de" },
       { name: "Dijonsennep", qty: "1 spsk", url: "https://www.bilkatogo.dk/s/?search=dijonsennep" },
-      { name: "Kartofler (til mos)", qty: "1,2 kg", url: "https://www.bilkatogo.dk/s/?search=kartofler" },
-      { name: "Smør", qty: "75g", url: "https://www.bilkatogo.dk/s/?search=sm%C3%B8r" },
-      { name: "Mælk", qty: "1 dl", url: "https://www.bilkatogo.dk/s/?search=m%C3%A6lk" },
+      { name: "Kartofler (til mos)", qty: "1,5 kg — lav ekstra!", url: "https://www.bilkatogo.dk/s/?search=kartofler" },
+      { name: "Smør (Lurpak tilbud!)", qty: "100g", url: "https://www.bilkatogo.dk/s/?search=lurpak" },
+      { name: "Mælk", qty: "1-2 dl", url: "https://www.bilkatogo.dk/s/?search=m%C3%A6lk" },
+      { name: "Persille (frisk)", qty: "til pynt", url: "https://www.bilkatogo.dk/s/?search=persille" },
     ]
   },
   {
-    day: "Søndag", emoji: "🐣", meal: "Langtidsstegt nakkefilet med rødkål og kartoffelmos",
+    day: "Søndag", dato: "5. april — 1. Påskedag 🐣", emoji: "🐣", meal: "Langtidsstegt nakkefilet med rødkål og kartoffelmos",
     color: "#e8f8f5", accent: "#16a085",
     rester: true, resterFra: "Lørdag",
     naering: {
-      hel: { kcal: 3120, protein: 220, kulhy: 168, fedt: 160 },
-      portion: { kcal: 780, protein: 55, kulhy: 42, fedt: 40 },
+      hel: { kcal: 3160, protein: 232, kulhy: 176, fedt: 168 },
+      portion: { kcal: 790, protein: 58, kulhy: 44, fedt: 42 },
     },
     recipe: {
       tid: "3 timer", sværhed: "Let (men tålmodig)",
-      intro: "Påskesøndag! 🐣 Nakkefileten passes næsten sig selv i ovnen mens I nyder påsken. Brug kartoffelmosen fra lørdag — så er der næsten ingen arbejde.",
+      intro: "🐣 God påske! Nakkefileten passer sig selv i ovnen mens I nyder påskedagen. Brug kartoffelmosen fra lørdag — så er der næsten ingen arbejde. Bilka er LUKKET i dag.",
       trin: [
-        "Dagen før (eller morgenen): Gnid nakkefileten med hvidløg, timian, salt og peber. Lad marinere.",
-        "Forvarm ovnen til 160°. Læg nakkefileten i en bradepande og hæld oksefond ved.",
+        "Morgenen: Gnid nakkefileten godt med hvidløg, timian, salt og peber.",
+        "Forvarm ovnen til 160°. Læg nakkefileten i bradepande og hæld oksefond ved.",
         "Tilsæt gulerødder og persillerod i grove stykker rundt om kødet.",
-        "Dæk bradepanden med folie og sæt i ovnen. Bag i 2½-3 timer til kødet er mørt og falder fra hinanden.",
-        "Tag folien af de sidste 20 min og skru op på 200° for at give en gylden overflade.",
-        "Varm kartoffelmosen fra lørdag op i en gryde med lidt ekstra mælk og smør — pisk den luftig igen.",
-        "Varm rødkålen op med lidt smør og sukker. Lav en simpel sovs af stegeskyen.",
-        "God påske! 🐣 Server med det hele og nyd familiens selskab.",
-      ]
+        "Dæk med folie og bag i 2½-3 timer til kødet er mørt og falder fra hinanden.",
+        "Tag folien af de sidste 20 min. Skru op til 200° for at give gylden overflade.",
+        "Varm kartoffelmosen fra lørdag op i en gryde med lidt ekstra smør og mælk — pisk den luftig igen.",
+        "Varm rødkålen op med en klat smør og lidt sukker.",
+        "Lav en enkel sovs af stegeskyen fra bradepanden — sigt den og reducer.",
+        "Server med det hele og nyd familiens selskab. God påske! 🐣",
+      ],
     },
     ingredients: [
       { name: "Nakkefilet", qty: "1,5 kg", url: "https://www.bilkatogo.dk/s/?search=nakkefilet" },
@@ -222,6 +215,8 @@ const madplan = [
       { name: "Persillerod", qty: "2 stk", url: "https://www.bilkatogo.dk/s/?search=persillerod" },
       { name: "Hvidløg + timian", qty: "til marinering", url: "https://www.bilkatogo.dk/s/?search=hvidl%C3%B8g" },
       { name: "Oksefond", qty: "3 dl", url: "https://www.bilkatogo.dk/s/?search=oksefond" },
+      { name: "Smør (Lurpak tilbud!)", qty: "50g", url: "https://www.bilkatogo.dk/s/?search=lurpak" },
+      { name: "Løse druer (Bilka tilbud!)", qty: "200g — til dessert", url: "https://www.bilkatogo.dk/s/?search=druer" },
     ]
   },
 ];
@@ -265,7 +260,7 @@ function NaeringKort({ naering, accent, vis }) {
           </div>
         ))}
       </div>
-      <NaeringBar label="Protein" value={n.protein} max={vis === "portion" ? 60 : 240} color="#e74c3c" />
+      <NaeringBar label="Protein" value={n.protein} max={vis === "portion" ? 70 : 280} color="#e74c3c" />
       <NaeringBar label="Kulhydrat" value={n.kulhy} max={vis === "portion" ? 100 : 400} color="#3498db" />
       <NaeringBar label="Fedt" value={n.fedt} max={vis === "portion" ? 80 : 320} color="#f39c12" />
       <div style={{ fontSize: 10, color: "#ccc", marginTop: 10 }}>* Estimerede værdier baseret på ingrediensernes standardnæringsindhold</div>
@@ -341,7 +336,6 @@ export default function App() {
                   transition: "all 0.2s", position: "relative",
                 }}>
                   {done && <span style={{ position: "absolute", top: -6, right: -6, fontSize: 13 }}>✅</span>}
-                  {d.gaester && <span style={{ position: "absolute", top: -6, left: -6, fontSize: 11 }}>👥</span>}
                   {d.rester && <span style={{ position: "absolute", top: -6, left: -6, fontSize: 11 }}>♻️</span>}
                   <div style={{ fontSize: 20 }}>{d.emoji}</div>
                   <div>{d.day}</div>
@@ -360,10 +354,10 @@ export default function App() {
                 <div style={{ fontSize: 32 }}>{d.emoji}</div>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 4 }}>
                   <div style={{ fontSize: 20, fontWeight: "bold" }}>{d.day}</div>
-                  {d.gaester && <span style={{ fontSize: 11, background: "rgba(255,255,255,0.25)", padding: "2px 8px", borderRadius: 20 }}>👥 Gæster</span>}
+                  <div style={{ fontSize: 13, opacity: 0.8 }}>{d.dato}</div>
                   {d.rester && <span style={{ fontSize: 11, background: "rgba(255,255,255,0.25)", padding: "2px 8px", borderRadius: 20 }}>♻️ Rester fra {d.resterFra}</span>}
                 </div>
-                <div style={{ fontSize: 14, opacity: 0.9, fontStyle: "italic" }}>{d.meal}</div>
+                <div style={{ fontSize: 14, opacity: 0.9, fontStyle: "italic", marginTop: 4 }}>{d.meal}</div>
                 <div style={{ marginTop: 8, display: "flex", gap: 8, flexWrap: "wrap" }}>
                   <span style={{ fontSize: 11, background: "rgba(255,255,255,0.2)", padding: "3px 10px", borderRadius: 20 }}>⏱ {d.recipe.tid}</span>
                   <span style={{ fontSize: 11, background: "rgba(255,255,255,0.2)", padding: "3px 10px", borderRadius: 20 }}>🔥 {d.naering.portion.kcal} kcal/pers.</span>
@@ -405,11 +399,11 @@ export default function App() {
               <div style={{ background: d.accent, color: "white", padding: "20px" }}>
                 <div style={{ fontSize: 36 }}>{d.emoji}</div>
                 <div style={{ fontSize: 22, fontWeight: "bold", marginTop: 6 }}>{d.meal}</div>
+                <div style={{ fontSize: 13, opacity: 0.8, marginTop: 2 }}>{d.dato}</div>
                 <div style={{ marginTop: 10, display: "flex", gap: 8, flexWrap: "wrap" }}>
                   <span style={{ fontSize: 12, background: "rgba(255,255,255,0.2)", padding: "4px 12px", borderRadius: 20 }}>⏱ {d.recipe.tid}</span>
                   <span style={{ fontSize: 12, background: "rgba(255,255,255,0.2)", padding: "4px 12px", borderRadius: 20 }}>📊 {d.recipe.sværhed}</span>
                   <span style={{ fontSize: 12, background: "rgba(255,255,255,0.2)", padding: "4px 12px", borderRadius: 20 }}>👥 4 personer</span>
-                  {d.gaester && <span style={{ fontSize: 12, background: "rgba(255,255,255,0.3)", padding: "4px 12px", borderRadius: 20, fontWeight: "bold" }}>🎉 Gæstemiddag</span>}
                   {d.rester && <span style={{ fontSize: 12, background: "rgba(255,255,255,0.3)", padding: "4px 12px", borderRadius: 20 }}>♻️ Rester fra {d.resterFra}</span>}
                 </div>
               </div>
@@ -422,19 +416,6 @@ export default function App() {
                     <div style={{ fontSize: 14, lineHeight: 1.6, paddingTop: 4 }}>{trin}</div>
                   </div>
                 ))}
-                {d.recipe.sovse && (
-                  <div style={{ marginTop: 20, padding: "14px", background: "#f9f4ff", borderRadius: 12, borderLeft: `4px solid ${d.accent}` }}>
-                    <div style={{ fontSize: 11, letterSpacing: 2, textTransform: "uppercase", color: d.accent, marginBottom: 10 }}>De to sovse 🥃</div>
-                    <div style={{ marginBottom: 10 }}>
-                      <div style={{ fontWeight: "bold", fontSize: 13, marginBottom: 4 }}>Skysovs</div>
-                      <div style={{ fontSize: 13, color: "#555", lineHeight: 1.5 }}>{d.recipe.sovse.skysovs}</div>
-                    </div>
-                    <div>
-                      <div style={{ fontWeight: "bold", fontSize: 13, marginBottom: 4 }}>Whiskeysovs 🥃</div>
-                      <div style={{ fontSize: 13, color: "#555", lineHeight: 1.5 }}>{d.recipe.sovse.whiskeysovs}</div>
-                    </div>
-                  </div>
-                )}
                 <div style={{ marginTop: 20, padding: "14px", background: d.color, borderRadius: 12, borderLeft: `4px solid ${d.accent}` }}>
                   <div style={{ fontSize: 11, letterSpacing: 2, textTransform: "uppercase", color: d.accent, marginBottom: 8 }}>Ingredienser</div>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
@@ -474,7 +455,7 @@ export default function App() {
                   {madplan.map((dag, i) => (
                     <div key={i} onClick={() => setActiveDay(i)} style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 12px", borderRadius: 10, cursor: "pointer", background: i === activeDay ? dag.color : "transparent", border: i === activeDay ? `2px solid ${dag.accent}` : "2px solid transparent", marginBottom: 6, transition: "all 0.2s" }}>
                       <span style={{ fontSize: 20 }}>{dag.emoji}</span>
-                      <span style={{ fontSize: 13, flex: 1, fontWeight: i === activeDay ? "bold" : "normal" }}>{dag.day}{dag.rester ? " ♻️" : ""}{dag.gaester ? " 👥" : ""}</span>
+                      <span style={{ fontSize: 13, flex: 1, fontWeight: i === activeDay ? "bold" : "normal" }}>{dag.day}{dag.rester ? " ♻️" : ""}</span>
                       <span style={{ fontSize: 13, fontWeight: "bold", color: dag.accent }}>{dag.naering.portion.kcal} kcal</span>
                       <span style={{ fontSize: 11, color: "#e74c3c" }}>{dag.naering.portion.protein}g P</span>
                       <span style={{ fontSize: 11, color: "#3498db" }}>{dag.naering.portion.kulhy}g K</span>
@@ -502,12 +483,15 @@ export default function App() {
               <span style={{ fontWeight: "bold", fontSize: 15 }}>Samlet indkøbsliste — 7 dage</span>
               <span style={{ fontSize: 13, opacity: 0.7 }}>{checkedItems}/{totalItems} afkrydset</span>
             </div>
+            <div style={{ background: "#fff8e1", border: "2px solid #f39c12", borderRadius: 12, padding: "12px 16px", marginBottom: 16 }}>
+              <div style={{ fontWeight: "bold", color: "#e67e22", marginBottom: 4 }}>⚠️ Påskehensyn — Husk at handle!</div>
+              <div style={{ fontSize: 13, color: "#555" }}>Bilka LUKKET: Skærtorsdag 2. april og Langfredag 3. april. Næste åbent: Påskelørdag 4. april (7-22). Handler alt ind senest onsdag!</div>
+            </div>
             {madplan.map((day, di) => (
               <div key={di} style={{ marginBottom: 18 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
                   <span style={{ fontSize: 18 }}>{day.emoji}</span>
                   <span style={{ fontSize: 13, fontWeight: "bold", color: day.accent }}>{day.day} — {day.meal}</span>
-                  {day.gaester && <span style={{ fontSize: 11, background: day.color, color: day.accent, padding: "2px 8px", borderRadius: 20, border: `1px solid ${day.accent}40` }}>👥 Gæster</span>}
                   {day.rester && <span style={{ fontSize: 11, background: "#f0f0f0", color: "#666", padding: "2px 8px", borderRadius: 20 }}>♻️ Rester</span>}
                 </div>
                 <div style={{ background: "white", borderRadius: 12, overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.05)", borderLeft: `4px solid ${day.accent}` }}>
