@@ -1,12 +1,13 @@
 import { useState } from "react";
 
-// Madplan uge 15 · 2026 · 30. marts – 5. april
-// Genereret af MasterKOK 🥩 baseret på:
+// Madplan uge 14 · 2026 · 30. marts – 5. april
+// Genereret af MasterKOK 🥩 søndag 29. marts 2026 kl. 07:00
+// Baseret på:
 // - Bilka-tilbud uge 14 (gælder t.o.m. lørdag 4. april)
-// - Kalender: Per & Rikke på besøg mandag 30/3 kl. 18
-// - Karoline hjemme fra Kap Verde mandag 30/3
+// - Kalender: Per & Rikke på besøg mandag 30/3 kl. 18 | Karoline hjemme fra Kap Verde
 // - Bilka LUKKET: Skærtorsdag 2. april og Langfredag 3. april
 // - Familieregel: rester bruges kun dagen efter, aldrig 2 dage efter
+// - Ingen lam, ingen ost (undtagen pizza/burger)
 
 const madplan = [
   {
@@ -17,36 +18,36 @@ const madplan = [
     gaester: true,
     color: "#fdf2f8",
     accent: "#8e44ad",
-    bilkaTilbud: "Striploin/mørbrad okse 1,2-3 kg — 349,- (frit valg)",
+    bilkaTilbud: "Striploin/mørbrad okse 1,2–3 kg — 349,- frit valg",
     naering: {
-      hel: { kcal: 4200, protein: 320, kulhy: 240, fedt: 200 },
-      portion: { kcal: 700, protein: 53, kulhy: 40, fedt: 33 },
+      hel: { kcal: 5200, protein: 380, kulhy: 280, fedt: 240 },
+      portion: { kcal: 867, protein: 63, kulhy: 47, fedt: 40 },
     },
     recipe: {
-      tid: "50 min",
-      sværhed: "Medium",
-      intro: "Karoline er hjemme fra Kap Verde — og Per & Rikke kommer til middag! Det kalder på noget ordentligt. Striploin er Bilkas bedste tilbud denne uge (349,- frit valg) og er perfekt til festmiddagen. Lav ekstra pommes frites — de er gode kolde dagen efter. Lav sandwich-rester af det evt. overskydende kød.",
+      tid: "55 min",
+      svaerhed: "Medium",
+      intro: "Karoline er hjemme fra Kap Verde og Per & Rikke kommer til middag kl. 18! Det kalder på noget ordentligt. Striploin er Bilkas bedste tilbud (349,- frit valg). Server med skysovs/whiskeysovs og sprøde pommes frites. Lav ekstra bøf til tirsdag's sandwich!",
       trin: [
-        "Tag bøfferne ud af køleskabet 30 min før tilberedning — de skal have stuetemperatur.",
-        "Imens: skær kartofler i stave med skrællen på. Tøm i koldt vand i 15 min, tør grundigt.",
-        "Ovn til 210°. Bland kartofler med olie, salt og peber. Spred på bagepapir og bag 30-35 min til sprøde.",
-        "Krydr bøfferne generøst med salt og peber — INGEN marinade! Lad kødet tale for sig selv.",
-        "Grill- eller støbejernspande på MAX varme med neutral olie. Når den ryger: bøfferne på! 3 min per side for medium-rare.",
-        "Hvil bøfferne på en rist i 5 min. Skær mod muskelfibrene.",
-        "Skysovs: hæld stegeskyen fra panden i en lille gryde, tilsæt oksefond og lad reducere. Jævn evt. med lidt maizena. Vil du lave whiskeysovs: tilsæt en god sjat whisky og lad alkoholen koge af — fantastisk til oksekød!",
-        "Anret med bøf, pommes frites og den gode sky- eller whiskeysovs. Gem evt. overskydende bøf til sandwich tirsdag.",
+        "Tag bøfferne ud af køleskabet 45 min før — stuetemperatur er vigtigt!",
+        "Skær kartofler i stave med skrællen. Læg i koldt vand 20 min, tør grundigt.",
+        "Ovn 215°. Bland kartofler med olie, salt og peber. Bag 35 min til gyldne og sprøde.",
+        "Krydr bøfferne med groft salt og sort peber. INGEN marinade — lad kødet tale!",
+        "Støbejernspande på MAX varme med neutral olie. Når det ryger: bøfferne på! 3 min per side for medium-rare.",
+        "Hvil bøfferne 7–8 min under sølvfolie. Skær mod muskelfibrene.",
+        "Skysovs: hæld stegeskyen i gryde, tilsæt 2 dl oksefond, reducer. Tilsæt whisky og lad alkoholen koge af. Jævn med maizena.",
+        "Anret smukt og dæk bordet fint — det er fest! 🥂 Gem ca. 400g bøf til tirsdag.",
       ],
     },
     ingredients: [
-      { name: "Striploin af okse (Bilka tilbud! 349,-)", qty: "1,5-1,8 kg", url: "https://www.bilkatogo.dk/s?query=88367641%2088367621" },
-      { name: "Kartofler til pommes frites", qty: "1,2 kg", url: "https://www.bilkatogo.dk/s/?search=kartofler" },
-      { name: "Smør (Lurpak — tilbud!)", qty: "100g", url: "https://www.bilkatogo.dk/s/?search=lurpak" },
+      { name: "Striploin af okse (Bilka tilbud! 349,-)", qty: "2 kg", url: "https://www.bilkatogo.dk/s?query=88367641" },
+      { name: "Kartofler til pommes frites", qty: "1,5 kg", url: "https://www.bilkatogo.dk/s/?search=kartofler" },
+      { name: "Smør/Lurpak (tilbud! 12,-/200g)", qty: "150g", url: "https://www.bilkatogo.dk/s/?search=lurpak" },
       { name: "Oksefond (til skysovs)", qty: "2 dl", url: "https://www.bilkatogo.dk/s/?search=oksefond" },
-      { name: "Whisky (til whiskeysovs — valgfri)", qty: "en god sjat", url: "https://www.bilkatogo.dk/s/?search=whisky" },
-      { name: "Maizena (til jævning)", qty: "1 tsk", url: "https://www.bilkatogo.dk/s/?search=maizena" },
-      { name: "Cherrytomater (til pynt)", qty: "200g", url: "https://www.bilkatogo.dk/s/?search=cherrytomater" },
-      { name: "Rucola/salat", qty: "1 pose", url: "https://www.bilkatogo.dk/s/?search=rucola" },
-      { name: "Rødvin (til gæsterne)", qty: "1-2 fl.", url: "https://www.bilkatogo.dk/s/?search=r%C3%B8dvin" },
+      { name: "Whisky (til whiskeysovs)", qty: "en god sjat", url: "https://www.bilkatogo.dk/s/?search=whisky" },
+      { name: "Maizena (til jævning)", qty: "1–2 tsk", url: "https://www.bilkatogo.dk/s/?search=maizena" },
+      { name: "Bearnaise (færdig)", qty: "1 pak", url: "https://www.bilkatogo.dk/s/?search=bearnaise" },
+      { name: "Cherrytomater + rucola (til pynt)", qty: "200g + 1 pose", url: "https://www.bilkatogo.dk/s/?search=cherrytomater" },
+      { name: "Rødvin til gæsterne", qty: "2 fl.", url: "https://www.bilkatogo.dk/s/?search=rødvin" },
     ],
   },
   {
@@ -59,178 +60,180 @@ const madplan = [
     color: "#eafaf1",
     accent: "#27ae60",
     naering: {
-      hel: { kcal: 2400, protein: 176, kulhy: 200, fedt: 96 },
-      portion: { kcal: 600, protein: 44, kulhy: 50, fedt: 24 },
+      hel: { kcal: 2400, protein: 172, kulhy: 224, fedt: 88 },
+      portion: { kcal: 600, protein: 43, kulhy: 56, fedt: 22 },
     },
     recipe: {
-      tid: "15 min",
-      sværhed: "Let",
-      intro: "Sommerhjul på EV6 kl. 8 — det bliver en travl morgen! Til gengæld er aftensmaden nem: bøfsandwich på mandagens stripoin. Skær kødet i tynde skiver og server på godt brød med tilbehør. Ingen opvarmning nødvendig — koldt bøf i sandwich er faktisk bedre.",
+      tid: "20 min",
+      svaerhed: "Let",
+      intro: "Sommerhjul på EV6 kl. 8 — travl morgen! Men aftensmaden er nem: bøfsandwich på gårsdagens striploin. Koldt bøf i sandwich er faktisk fantastisk. Karamelliserede løg gør det til noget særligt.",
       trin: [
-        "Skær resterende striploin i tynde skiver mod muskelfibrene.",
-        "Skær ciabatta eller baguette i halve og rist dem på brødristeren eller i ovnen.",
-        "Karamelliser løg i smør ved lav varme i 15 min til søde og bløde.",
+        "Skær resterende striploin i tynde skiver mod muskelfibrene (ca. 5 mm).",
+        "Skær ciabatta eller baguette i halve og rist i ovnen eller på brødristeren.",
+        "Karamelliser løg: tynde ringe, smør, LAV varme i 20 min — søde og gyldne.",
         "Smør brødet med dijonsennep eller remoulade.",
-        "Byg sandwich: bøfskiver, karamelliserede løg, rucola, cherrytomater. Fold og server.",
-        "Server med de evt. resterende pommes frites fra mandag — sprøde i ovnen i 5 min ved 200°.",
+        "Byg sandwich: bøfskiver, karamelliserede løg, rucola, cherrytomater fra mandag.",
+        "Server med evt. resterende pommes frites — sprøde i ovnen 200° i 6 min.",
       ],
     },
     ingredients: [
       { name: "Striploin (rester fra mandag)", qty: "ca. 400g", url: "https://www.bilkatogo.dk/s/?search=bøf" },
       { name: "Ciabatta eller baguette", qty: "2 stk", url: "https://www.bilkatogo.dk/s/?search=ciabatta" },
-      { name: "Løg (til karamellisering)", qty: "2 store", url: "https://www.bilkatogo.dk/s/?search=l%C3%B8g" },
-      { name: "Smør (Lurpak — tilbud!)", qty: "50g", url: "https://www.bilkatogo.dk/s/?search=lurpak" },
+      { name: "Løg (karamellisering)", qty: "3 store", url: "https://www.bilkatogo.dk/s/?search=løg" },
+      { name: "Smør/Lurpak (tilbud! 12,-)", qty: "75g", url: "https://www.bilkatogo.dk/s/?search=lurpak" },
       { name: "Dijonsennep / remoulade", qty: "til smøring", url: "https://www.bilkatogo.dk/s/?search=remoulade" },
-      { name: "Rucola + cherrytomater", qty: "fra mandag — rester", url: "https://www.bilkatogo.dk/s/?search=rucola" },
+      { name: "Rucola + cherrytomater (rester fra mandag)", qty: "rester", url: "https://www.bilkatogo.dk/s/?search=rucola" },
     ],
   },
   {
     day: "Onsdag",
     dato: "1. april ⚠️",
     emoji: "🍗",
-    meal: "Kyllingebryst i flødesovs med ris — HUSK: handle alt ind i dag!",
+    meal: "Kyllingebryst i cremet flødesovs med basmatiris — HANDLE ALT IND!",
     color: "#fef9e7",
     accent: "#e67e22",
-    bilkaTilbud: "Kyllingebrystfilet 2,6 kg — 179,- (frit valg)",
+    bilkaTilbud: "Kyllingebrystfilet 2,6 kg — 179,- frit valg",
     naering: {
-      hel: { kcal: 2880, protein: 248, kulhy: 208, fedt: 112 },
-      portion: { kcal: 720, protein: 62, kulhy: 52, fedt: 28 },
+      hel: { kcal: 2960, protein: 264, kulhy: 224, fedt: 104 },
+      portion: { kcal: 740, protein: 66, kulhy: 56, fedt: 26 },
     },
     recipe: {
       tid: "35 min",
-      sværhed: "Let",
-      intro: "⚠️ VIGTIG DAG: Bilka er lukket torsdag og fredag! Handle alt ind til resten af ugen i dag. Kyllingebrystfileten er Bilkas bedste tilbud denne uge (2,6 kg for 179,-). Lav ekstra kylling og ris — brug dem til wraps torsdag. Pak rester klar i køleskabet med det samme.",
+      svaerhed: "Let",
+      intro: "⚠️ VIGTIG DAG: Bilka er lukket torsdag OG fredag! Handle ALT ind til resten af ugen i dag. Kyllingebryst i flødesovs er en favorit — cremet og mæt. Lav dobbelt portion kylling og ris til torsdag's wraps!",
       trin: [
-        "Skær kyllingebrysterne i medallioner på ca. 2 cm. Krydr med salt, peber og paprika.",
-        "Brun kyllingestykker i smør ved høj varme — 3 min per side. Tag ud og hvil.",
-        "Svits champignon og løg i samme pande til gyldne, ca. 5 min.",
-        "Tilsæt fløde og dijonsennep. Rør godt og lad simre 5 min til sovsen er cremet.",
-        "Kom kyllingen tilbage og varm igennem i 3-4 min. Drys med persille.",
-        "Kog ris efter pakken. LAV 600g ris i alt — gem halvdelen til wraps torsdag!",
-        "Gem 3-4 kyllingestykker i køleskabet til torsdag.",
+        "⚠️ GÅ I BILKA I DAG — køb alt til onsdag, torsdag og fredag!",
+        "Skær kyllingebrysterne i medallioner ca. 2 cm tykke. Krydr med salt, peber og paprika.",
+        "Brun kylling i smør ved høj varme — 3 min per side til gylden. Tag op og hvil.",
+        "Svits champignon og løg i samme pande til gyldne, ca. 5–6 min.",
+        "Tilsæt fløde og dijonsennep. Simmer 5–7 min til cremet sovs. Kom kylling tilbage.",
+        "Kog 600g basmatiris — lav DOBBELT! Gem 300g ris + 3–4 kyllingestykker til torsdag.",
       ],
     },
     ingredients: [
-      { name: "Kyllingebrystfilet (Bilka tilbud! 2,6 kg — 179,-)", qty: "1,2 kg (til 2 dage)", url: "https://www.bilkatogo.dk/s/?search=kyllingebryst" },
-      { name: "Champignon", qty: "300g", url: "https://www.bilkatogo.dk/s/?search=champignon" },
-      { name: "Løg", qty: "2 stk", url: "https://www.bilkatogo.dk/s/?search=l%C3%B8g" },
-      { name: "Fløde 38%", qty: "2½ dl", url: "https://www.bilkatogo.dk/s/?search=fl%C3%B8de" },
-      { name: "Dijonsennep", qty: "1 spsk", url: "https://www.bilkatogo.dk/s/?search=dijonsennep" },
-      { name: "Ris (basmati)", qty: "600g (lav ekstra!)", url: "https://www.bilkatogo.dk/s/?search=basmatiris" },
-      { name: "Smør (Lurpak — tilbud!)", qty: "75g", url: "https://www.bilkatogo.dk/s/?search=lurpak" },
-      { name: "Persille (frisk)", qty: "til drys", url: "https://www.bilkatogo.dk/s/?search=persille" },
-      { name: "Tortillas (til torsdag — handle ind i dag!)", qty: "1 pk", url: "https://www.bilkatogo.dk/s/?search=tortillas" },
-      { name: "Avocado (til torsdag — handle ind i dag!)", qty: "2 stk", url: "https://www.bilkatogo.dk/s/?search=avocado" },
-      { name: "Salsa (til torsdag — handle ind i dag!)", qty: "1 glas", url: "https://www.bilkatogo.dk/s/?search=salsa" },
+      { name: "Kyllingebrystfilet (Bilka tilbud! 2,6 kg — 179,-)", qty: "1,2 kg (til 2 dage!)", url: "https://www.bilkatogo.dk/s/?search=kyllingebryst" },
+      { name: "Champignon", qty: "350g", url: "https://www.bilkatogo.dk/s/?search=champignon" },
+      { name: "Løg", qty: "2 stk", url: "https://www.bilkatogo.dk/s/?search=løg" },
+      { name: "Fløde 38%", qty: "3 dl", url: "https://www.bilkatogo.dk/s/?search=fløde" },
+      { name: "Dijonsennep", qty: "1½ spsk", url: "https://www.bilkatogo.dk/s/?search=dijonsennep" },
+      { name: "Basmatiris (dobbelt portion!)", qty: "600g", url: "https://www.bilkatogo.dk/s/?search=basmatiris" },
+      { name: "Smør/Lurpak (tilbud! 12,-)", qty: "100g", url: "https://www.bilkatogo.dk/s/?search=lurpak" },
+      { name: "Persille + timian", qty: "til drys og sovs", url: "https://www.bilkatogo.dk/s/?search=persille" },
+      { name: "🔔 Tortillas — til torsdag, handler NU!", qty: "1 pk (8 stk)", url: "https://www.bilkatogo.dk/s/?search=tortillas" },
+      { name: "🔔 Avocado — til torsdag, handler NU!", qty: "2 stk", url: "https://www.bilkatogo.dk/s/?search=avocado" },
+      { name: "🔔 Salsa — til torsdag, handler NU!", qty: "1 glas", url: "https://www.bilkatogo.dk/s/?search=salsa" },
+      { name: "🔔 Laks — til fredag, handler NU!", qty: "800g–1 kg", url: "https://www.bilkatogo.dk/s/?search=laks" },
+      { name: "🔔 Hvide asparges — til fredag (Bilka tilbud 28,-/bundt)", qty: "2 bundter", url: "https://www.bilkatogo.dk/s/?search=hvide+asparges" },
+      { name: "🔔 Nye kartofler — til fredag (Bilka tilbud 0,95/100g)", qty: "600g", url: "https://www.bilkatogo.dk/s/?search=nye+kartofler" },
     ],
   },
   {
     day: "Torsdag",
     dato: "2. april — Skærtorsdag 🐣",
     emoji: "🌯",
-    meal: "Kyllingewraps med rester fra onsdag — Bilka lukket!",
+    meal: "Kyllingewraps med avocado og salsa — Bilka lukket!",
     rester: true,
     resterFra: "Onsdag",
     color: "#e8f4f8",
     accent: "#2980b9",
     naering: {
-      hel: { kcal: 2320, protein: 192, kulhy: 232, fedt: 80 },
-      portion: { kcal: 580, protein: 48, kulhy: 58, fedt: 20 },
+      hel: { kcal: 2360, protein: 196, kulhy: 240, fedt: 84 },
+      portion: { kcal: 590, protein: 49, kulhy: 60, fedt: 21 },
     },
     recipe: {
       tid: "15 min",
-      sværhed: "Let",
-      intro: "🐣 God skærtorsdag! Bilka er LUKKET i dag — heldigvis har vi kylling og ris fra onsdag. Hurtigt og nemt: alle bygger selv! Det er påskeferie, afslap og nyd det.",
+      svaerhed: "Let",
+      intro: "🐣 God Skærtorsdag! Bilka er LUKKET — men du handlet klogt onsdag. Kylling og ris fra i går giver en nem og festlig wrap-aftensmad. Alle bygger selv ved bordet — perfekt til afslappet påskeferie!",
       trin: [
-        "Varm kyllingestykker fra onsdag i en pande med lidt smør — 3-4 min ved middel varme.",
-        "Riv kyllingestykkerne i strimler med to gafler eller fingrene.",
-        "Varm risene i mikro med lidt vand over — 2 min, rør rundt.",
+        "Varm kyllingestykkerne fra onsdag i pande med lidt smør — 3–4 min. Riv i strimler.",
+        "Varm risene: dryp lidt vand over, dæk med folie — mikro 2 min ELLER gryde med låg.",
         "Skær avocado i skiver og dryp med limesaft.",
-        "Varm tortillas i tør pande (30 sek per side) eller pakk dem i fugtigt viskestykke og kør dem i mikro i 1 min.",
-        "Sæt alt på bordet: kylling, ris, avocado, salsa, creme fraiche, salat. Alle bygger selv — God påske! 🐣",
+        "Varm tortillas: tør pande 30 sek per side ELLER fugtigt viskestykke i mikro 60 sek.",
+        "Sæt ALT på bordet: kylling, ris, avocado, salsa, creme fraiche, salat. Alle bygger selv!",
+        "God Skærtorsdag — nyd påskefreden! 🐣",
       ],
     },
     ingredients: [
-      { name: "Kylling i flødesovs (rester fra onsdag)", qty: "ca. 400-500g", url: "https://www.bilkatogo.dk/s/?search=kylling" },
-      { name: "Ris (rester fra onsdag)", qty: "ca. 300g kogte ris", url: "https://www.bilkatogo.dk/s/?search=ris" },
-      { name: "Tortillas (handlet ind onsdag)", qty: "1 pk", url: "https://www.bilkatogo.dk/s/?search=tortillas" },
-      { name: "Avocado (handlet ind onsdag)", qty: "2 stk", url: "https://www.bilkatogo.dk/s/?search=avocado" },
-      { name: "Salsa (handlet ind onsdag)", qty: "1 glas", url: "https://www.bilkatogo.dk/s/?search=salsa" },
-      { name: "Creme fraiche", qty: "1 bøtte", url: "https://www.bilkatogo.dk/s/?search=creme+fraiche" },
-      { name: "Romaine salat", qty: "1 hoved", url: "https://www.bilkatogo.dk/s/?search=salat" },
+      { name: "Kylling i flødesovs (rester fra onsdag)", qty: "ca. 400g", url: "https://www.bilkatogo.dk/s/?search=kylling" },
+      { name: "Basmatiris (rester fra onsdag)", qty: "ca. 300g kogte", url: "https://www.bilkatogo.dk/s/?search=ris" },
+      { name: "Tortillas (handlet onsdag)", qty: "1 pk", url: "https://www.bilkatogo.dk/s/?search=tortillas" },
+      { name: "Avocado (handlet onsdag)", qty: "2 stk", url: "https://www.bilkatogo.dk/s/?search=avocado" },
+      { name: "Salsa (handlet onsdag)", qty: "1 glas", url: "https://www.bilkatogo.dk/s/?search=salsa" },
+      { name: "Creme fraiche 18%", qty: "1 bøtte", url: "https://www.bilkatogo.dk/s/?search=creme+fraiche" },
+      { name: "Romaine/isbergsalat", qty: "1 hoved", url: "https://www.bilkatogo.dk/s/?search=salat" },
       { name: "Lime", qty: "1 stk", url: "https://www.bilkatogo.dk/s/?search=lime" },
     ],
   },
   {
     day: "Fredag",
-    dato: "3. april — Langfredag 🐣",
+    dato: "3. april — Langfredag 🐟",
     emoji: "🐟",
     meal: "Ovnbagt laks med nye kartofler og hvide asparges — Bilka lukket!",
     color: "#fdedec",
     accent: "#c0392b",
+    bilkaTilbud: "Hvide asparges 28,-/bundt · Nye kartofler 0,95/100g",
     naering: {
-      hel: { kcal: 2560, protein: 192, kulhy: 176, fedt: 112 },
-      portion: { kcal: 640, protein: 48, kulhy: 44, fedt: 28 },
+      hel: { kcal: 2520, protein: 184, kulhy: 160, fedt: 120 },
+      portion: { kcal: 630, protein: 46, kulhy: 40, fedt: 30 },
     },
     recipe: {
       tid: "35 min",
-      sværhed: "Let",
-      intro: "🐣 Langfredag — Bilka er LUKKET! Laks er en klassiker på Langfredag. Hvide asparges er Bilkas tilbud (28,- pr. bundt). Enkelt, lækkert og perfekt til en stille påskefridag. Husk at handle laks og asparges onsdag!",
+      svaerhed: "Let",
+      intro: "🐟 Langfredag og laks er en klassisk kombination. Hvide asparges (28,-/bundt) og nye kartofler (0,95/100g) er Bilkas påsketilbud — alt handlet onsdag. Enkelt og lækkert til en stille påskefridag.",
       trin: [
-        "Forvarm ovnen til 180°. Læg laksen i et ovnfast fad og krydr med salt, peber og dild.",
-        "Dryp laksen med citronsaft og læg en klat smør ovenpå.",
-        "Dæk med folie og bag i 20-25 min til laksen er netop gennemstegt (stadig let rosa inden i).",
-        "Kog nye kartofler i saltet vand — ca. 15 min. Dryp med smeltet smør og hak persille over.",
-        "Hvide asparges: skræl den nederste tredjedel. Kog i saltet, let sukkersødet vand i 6-8 min.",
-        "Server laks med kartofler, asparges og en klat smeltet smør + frisk citron.",
-        "Enkel og festlig påskelangfredagsmiddag! 🐟",
+        "Forvarm ovnen til 180°. Læg laksen i ovnfast fad med bagepapir.",
+        "Krydr med groft salt, peber og masser af frisk dild. Dryp med ½ citron.",
+        "Læg en klat smør ovenpå laksen. Dæk tæt med folie.",
+        "Bag 20–25 min til netop gennemstegt (let rosa i midten — perfekt!).",
+        "Kog nye kartofler i saltet vand 15–18 min. Dryp med smeltet smør og hak persille over.",
+        "Hvide asparges: skræl den nederste tredjedel. Kog i saltet vand med ½ tsk sukker 6–8 min.",
+        "Server med frisk citron og smeltet smør til at hælde over. God Langfredag! 🐟",
       ],
     },
     ingredients: [
-      { name: "Laksefilet (handler ind onsdag!)", qty: "800g-1 kg", url: "https://www.bilkatogo.dk/s/?search=laks" },
+      { name: "Laksefilet (handlet onsdag)", qty: "800g–1 kg", url: "https://www.bilkatogo.dk/s/?search=laks" },
       { name: "Hvide asparges (Bilka tilbud! 28,-/bundt)", qty: "2 bundter", url: "https://www.bilkatogo.dk/s/?search=hvide+asparges" },
-      { name: "Nye kartofler (Bilka tilbud! 0,95/100g)", qty: "800g", url: "https://www.bilkatogo.dk/s/?search=nye+kartofler" },
-      { name: "Smør (Lurpak — tilbud!)", qty: "100g", url: "https://www.bilkatogo.dk/s/?search=lurpak" },
-      { name: "Dild (frisk eller tørret)", qty: "til krydderi", url: "https://www.bilkatogo.dk/s/?search=dild" },
+      { name: "Nye kartofler (Bilka tilbud! 0,95/100g)", qty: "600g", url: "https://www.bilkatogo.dk/s/?search=nye+kartofler" },
+      { name: "Smør/Lurpak (tilbud! 12,-)", qty: "100g", url: "https://www.bilkatogo.dk/s/?search=lurpak" },
+      { name: "Dild (frisk)", qty: "god håndfuld", url: "https://www.bilkatogo.dk/s/?search=dild" },
       { name: "Citron", qty: "2 stk", url: "https://www.bilkatogo.dk/s/?search=citron" },
-      { name: "Persille (frisk)", qty: "til kartofler", url: "https://www.bilkatogo.dk/s/?search=persille" },
+      { name: "Persille (frisk til kartofler)", qty: "til drys", url: "https://www.bilkatogo.dk/s/?search=persille" },
     ],
   },
   {
     day: "Lørdag",
     dato: "4. april — Påskelørdag",
     emoji: "🥩",
-    meal: "Hakkebøffer med bløde løg og kartofler",
+    meal: "Hakkebøffer med bløde løg, brun sovs og kartofler",
     color: "#f4ecf7",
     accent: "#8e44ad",
-    bilkaTilbud: "Hakket okse-/grisekød 1,3-1,9 kg — 99,- (frit valg)",
+    bilkaTilbud: "Hakket okse/gris 1,3–1,9 kg — 99,- frit valg",
     naering: {
-      hel: { kcal: 3120, protein: 224, kulhy: 208, fedt: 144 },
-      portion: { kcal: 780, protein: 56, kulhy: 52, fedt: 36 },
+      hel: { kcal: 3200, protein: 232, kulhy: 216, fedt: 152 },
+      portion: { kcal: 800, protein: 58, kulhy: 54, fedt: 38 },
     },
     recipe: {
       tid: "45 min",
-      sværhed: "Let",
-      intro: "🥩 Påskelørdag og lørdag kalder på familiens yndlingsret! Hakkebøffer med bløde løg er en klassiker familien elsker. Bilka er åbent i dag (7-22) — handler man der, kan man bruge hakket oksekød fra deres tilbud (99,- frit valg). Lav ekstra kartofler — bruges til søndagens nakkefilet!",
+      svaerhed: "Let",
+      intro: "🥩 Påskelørdag og Bilka er åbent igen (7–22)! Hakkebøffer med bløde løg er familiens absolutte favorit. Cremet brun sovs og karamelliserede løg. Lav ekstra kartofler til søndagens nakkefilet!",
       trin: [
-        "Hak løgene groft. Svits i RIGELIGT smør ved middel-lav varme i 20-25 min — rør jævnligt. De skal blive bløde, søde og karamelliserede.",
-        "Form hakket kød til 4 store bøffer (ca. 200g pr. stk). Krydr med salt og peber. Lav en fordybning i midten med tommelfingeren — så hvælver de ikke.",
-        "Steg bøfferne i smør ved middel-høj varme — 4-5 min per side til gennemstegte men stadig saftige.",
-        "Kog kartofler i saltet vand i 20 min til møre. Hæld af og lad dampe af lidt.",
-        "Lav brun sovs: brug stegefonden fra bøfferne, tilsæt en smule mel, oksebouillon og fløde. Rør til en silkeblød sovs.",
-        "Server bøfferne toppet med bløde løg, med kartofler og sovs ved siden af.",
-        "Gem 4-5 kogte kartofler til søndagens nakkefilet.",
+        "Karamelliser løg: tynde halvmåner i RIGELIGT smør ved LAV varme 25–30 min. Rør jævnligt — søde og gyldne.",
+        "Form hakket kød til 4 store bøffer ca. 200g pr. stk. Lav en fordybning i midten — hvælver ikke!",
+        "Steg i smør 4–5 min per side til gennemstegte men saftige.",
+        "Kog 1,5 kg kartofler i saltet vand 20 min. GEM 400–500g til søndag!",
+        "Brun sovs: stegefonden + 1 spsk mel, rør godt. Tilsæt 3 dl varm bouillon lidt ad gangen. Tilsæt 1 dl fløde. Simmer 5 min.",
+        "Server bøfferne med RIGELIGT bløde løg, kartofler og brun sovs. Nyd påsken! 🥂",
       ],
     },
     ingredients: [
-      { name: "Hakket oksekød (Bilka tilbud! 99,-)", qty: "800g", url: "https://www.bilkatogo.dk/s?query=11250346%2011248420" },
-      { name: "Løg (til bløde løg)", qty: "4 store", url: "https://www.bilkatogo.dk/s/?search=l%C3%B8g" },
-      { name: "Smør (Lurpak — tilbud!)", qty: "150g", url: "https://www.bilkatogo.dk/s/?search=lurpak" },
-      { name: "Kartofler (lav ekstra til søndag!)", qty: "1,2 kg", url: "https://www.bilkatogo.dk/s/?search=kartofler" },
-      { name: "Oksebouillon", qty: "3 dl", url: "https://www.bilkatogo.dk/s/?search=oksebouillon" },
-      { name: "Fløde 38%", qty: "1 dl (til sovs)", url: "https://www.bilkatogo.dk/s/?search=fl%C3%B8de" },
+      { name: "Hakket oksekød (Bilka tilbud! 99,-)", qty: "800g", url: "https://www.bilkatogo.dk/s/?search=hakket+oksekød" },
+      { name: "Løg (rigeligt til bløde løg!)", qty: "5 store", url: "https://www.bilkatogo.dk/s/?search=løg" },
+      { name: "Smør/Lurpak (tilbud! 12,-)", qty: "175g", url: "https://www.bilkatogo.dk/s/?search=lurpak" },
+      { name: "Kartofler (1,5 kg — gem til søndag!)", qty: "1,5 kg", url: "https://www.bilkatogo.dk/s/?search=kartofler" },
+      { name: "Oksebouillon (til sovs)", qty: "3 dl", url: "https://www.bilkatogo.dk/s/?search=oksebouillon" },
+      { name: "Fløde 38% (til sovs)", qty: "1 dl", url: "https://www.bilkatogo.dk/s/?search=fløde" },
       { name: "Hvedemel (til sovs)", qty: "1 spsk", url: "https://www.bilkatogo.dk/s/?search=hvedemel" },
-      { name: "Salt + peber", qty: "til krydderi", url: "https://www.bilkatogo.dk/s/?search=peber" },
+      { name: "Salt + sort peber", qty: "efter smag", url: "https://www.bilkatogo.dk/s/?search=peber" },
     ],
   },
   {
@@ -242,37 +245,37 @@ const madplan = [
     resterFra: "Lørdag",
     color: "#e8f8f5",
     accent: "#16a085",
-    bilkaTilbud: "Nakkefilet/ribbensteg dansk gris 1,9-3 kg — 99,- (frit valg)",
+    bilkaTilbud: "Nakkefilet/ribbensteg dansk gris 1,9–3 kg — 99,- frit valg",
     naering: {
-      hel: { kcal: 3200, protein: 240, kulhy: 192, fedt: 160 },
-      portion: { kcal: 800, protein: 60, kulhy: 48, fedt: 40 },
+      hel: { kcal: 3360, protein: 256, kulhy: 208, fedt: 168 },
+      portion: { kcal: 840, protein: 64, kulhy: 52, fedt: 42 },
     },
     recipe: {
-      tid: "3 timer",
-      sværhed: "Let (men tålmodig)",
-      intro: "🐣 God 1. påskedag! Nakkefileten passer sig selv i ovnen og er Bilkas allerbedste tilbud denne uge (99,- for op til 3 kg). Brug kartoflerne fra lørdag — det sparer tid og er nøjagtig rigtigt at bruge rester fra dagen før. Bilka er LUKKET i dag.",
+      tid: "3 timer (passer sig selv!)",
+      svaerhed: "Let men tålmodig",
+      intro: "🐣 God 1. Påskedag! Nakkefileten er Bilkas bedste tilbud (99,- op til 3 kg) og passer sig selv i 3 timer — perfekt til en afslappet påskedag. Brug kartoflerne fra lørdag. Bilka er LUKKET i dag.",
       trin: [
-        "Morgenen: Gnid nakkefileten godt med hvidløg, timian, rosmarin, salt og peber.",
-        "Forvarm ovnen til 160°. Læg nakkefileten i bradepanden og hæld oksefond + øl (eller vand) ved.",
-        "Tilsæt gulerødder og persillerod i grove stykker rundt om kødet.",
-        "Dæk tæt med folie og bag i 2½-3 timer til kødet er smukt mørt og falder fra hinanden.",
-        "Tag folien af de sidste 20 min. Skru op til 200° for at give en gylden og lidt sprød overflade.",
-        "Skær kartoflerne fra lørdag i halve og varm dem i bradepanden de sidste 15 min — de suger stegeskyen til sig!",
-        "Varm rødkålen op i en gryde med en klat smør og lidt sukker.",
-        "Lav en enkel sovs af stegeskyen: sigt den, kog op og jævn evt. med lidt maizena.",
-        "Server og nyd påskedagen med familien. Skål! 🥂",
+        "Gnid nakkefileten med knuste hvidløg, timian, rosmarin, rigeligt salt og peber.",
+        "Forvarm ovnen til 160°. Læg nakkefileten i bradepanden.",
+        "Hæld 4 dl oksefond + 2 dl vand (eller øl) ved. Tilsæt gulerødder og persillerødder.",
+        "Dæk TÆT med folie. Bag 2½–3 timer ved 160° til kødet er mørt og falder fra hinanden.",
+        "Fjern folien de sidste 20 min. Skru op til 200° for gylden overflade.",
+        "Skær kartoflerne fra lørdag i halve — sæt i bradepanden de SIDSTE 15 min. De suger stegeskyen — fantastisk!",
+        "Varm rødkål op i gryde med smør og 1 tsk sukker.",
+        "Lav sovs: sigt stegeskyen, kog op og jævn med maizena. Smag til.",
+        "Server og nyd 1. Påskedag med familien. Skål! 🥂🐣",
       ],
     },
     ingredients: [
-      { name: "Nakkefilet (Bilka tilbud! 99,-)", qty: "1,8-2 kg", url: "https://www.bilkatogo.dk/s?query=88709981%20901585" },
-      { name: "Kartofler (rester fra lørdag)", qty: "4-5 stk kogte", url: "https://www.bilkatogo.dk/s/?search=kartofler" },
-      { name: "Rødkål (glas)", qty: "1 stort glas", url: "https://www.bilkatogo.dk/s/?search=r%C3%B8dk%C3%A5l" },
+      { name: "Nakkefilet dansk gris (Bilka tilbud! 99,-)", qty: "1,8–2 kg", url: "https://www.bilkatogo.dk/s/?search=nakkefilet" },
+      { name: "Kartofler (rester fra lørdag)", qty: "400–500g kogte", url: "https://www.bilkatogo.dk/s/?search=kartofler" },
+      { name: "Rødkål (glas)", qty: "1 stort glas", url: "https://www.bilkatogo.dk/s/?search=rødkål" },
       { name: "Gulerødder", qty: "4 stk", url: "https://www.bilkatogo.dk/s/?search=gulerod" },
-      { name: "Persillerod", qty: "2 stk", url: "https://www.bilkatogo.dk/s/?search=persillerod" },
-      { name: "Hvidløg + timian + rosmarin", qty: "til marinering", url: "https://www.bilkatogo.dk/s/?search=hvidl%C3%B8g" },
-      { name: "Oksefond", qty: "3 dl", url: "https://www.bilkatogo.dk/s/?search=oksefond" },
-      { name: "Smør (Lurpak — tilbud!)", qty: "50g", url: "https://www.bilkatogo.dk/s/?search=lurpak" },
-      { name: "Maizena (til sovs)", qty: "1-2 tsk", url: "https://www.bilkatogo.dk/s/?search=maizena" },
+      { name: "Persillerødder", qty: "2 stk", url: "https://www.bilkatogo.dk/s/?search=persillerod" },
+      { name: "Hvidløg + timian + rosmarin", qty: "til marinering", url: "https://www.bilkatogo.dk/s/?search=hvidløg" },
+      { name: "Oksefond", qty: "4 dl", url: "https://www.bilkatogo.dk/s/?search=oksefond" },
+      { name: "Smør/Lurpak (tilbud! 12,-)", qty: "50g", url: "https://www.bilkatogo.dk/s/?search=lurpak" },
+      { name: "Maizena (til sovs)", qty: "1–2 tsk", url: "https://www.bilkatogo.dk/s/?search=maizena" },
     ],
   },
 ];
@@ -297,7 +300,7 @@ function NaeringKort({ naering, accent, vis }) {
   return (
     <div style={{ background: "#fafafa", borderRadius: 12, padding: "16px", border: "1px solid #eee", marginTop: 16 }}>
       <div style={{ fontSize: 11, letterSpacing: 2, textTransform: "uppercase", color: "#aaa", marginBottom: 12 }}>
-        Næringsindhold — {vis === "portion" ? "per portion" : "hele retten"}
+        Naeringsindhold — {vis === "portion" ? "per portion" : "hele retten"}
       </div>
       <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginBottom: 16 }}>
         <span style={{ fontSize: 36, fontWeight: "bold", color: accent }}>{n.kcal}</span>
@@ -319,7 +322,7 @@ function NaeringKort({ naering, accent, vis }) {
       <NaeringBar label="Protein" value={n.protein} max={vis === "portion" ? 70 : 280} color="#e74c3c" />
       <NaeringBar label="Kulhydrat" value={n.kulhy} max={vis === "portion" ? 100 : 400} color="#3498db" />
       <NaeringBar label="Fedt" value={n.fedt} max={vis === "portion" ? 80 : 320} color="#f39c12" />
-      <div style={{ fontSize: 10, color: "#ccc", marginTop: 10 }}>* Estimerede værdier baseret på ingrediensernes standardnæringsindhold</div>
+      <div style={{ fontSize: 10, color: "#ccc", marginTop: 10 }}>* Estimerede vaerdier baseret paa ingrediensernes standardnaeringsindhold</div>
     </div>
   );
 }
@@ -340,10 +343,10 @@ export default function App() {
   const progress = Math.round((checkedItems / totalItems) * 100);
 
   const tabs = [
-    { key: "plan", label: "📅 Madplan" },
-    { key: "recipe", label: "👨‍🍳 Opskrift" },
-    { key: "naering", label: "🥗 Næring" },
-    { key: "list", label: "🛒 Indkøb" },
+    { key: "plan", label: "Madplan" },
+    { key: "recipe", label: "Opskrift" },
+    { key: "naering", label: "Naering" },
+    { key: "list", label: "Indkob" },
   ];
 
   return (
@@ -351,11 +354,11 @@ export default function App() {
       <div style={{ background: "#1a3a2a", color: "white", padding: "16px 20px 0", position: "sticky", top: 0, zIndex: 100, boxShadow: "0 2px 12px rgba(0,0,0,0.2)" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
           <div>
-            <div style={{ fontSize: 10, letterSpacing: 3, textTransform: "uppercase", opacity: 0.5 }}>Uge 15 · 2026</div>
-            <div style={{ fontSize: 20, fontWeight: "bold" }}>🛒 Bilka Madplan — Uge 15 · Påskeugen 🐣</div>
+            <div style={{ fontSize: 10, letterSpacing: 3, textTransform: "uppercase", opacity: 0.5 }}>Uge 14 · 2026</div>
+            <div style={{ fontSize: 18, fontWeight: "bold" }}>Bilka Madplan — Uge 14 · Paaskeugen</div>
           </div>
           <div style={{ textAlign: "right" }}>
-            <div style={{ fontSize: 10, opacity: 0.5, marginBottom: 3 }}>Indkøbsfremgang</div>
+            <div style={{ fontSize: 10, opacity: 0.5, marginBottom: 3 }}>Indkobsfremgang</div>
             <div style={{ fontSize: 16, fontWeight: "bold" }}>{checkedItems}/{totalItems}</div>
             <div style={{ width: 100, height: 5, background: "rgba(255,255,255,0.15)", borderRadius: 3, marginTop: 3, overflow: "hidden" }}>
               <div style={{ width: `${progress}%`, height: "100%", background: "#5dbf6e", borderRadius: 3, transition: "width 0.4s ease" }} />
@@ -392,7 +395,7 @@ export default function App() {
                   transition: "all 0.2s", position: "relative",
                 }}>
                   {done && <span style={{ position: "absolute", top: -6, right: -6, fontSize: 13 }}>✅</span>}
-                  {d.rester && <span style={{ position: "absolute", top: -6, left: -6, fontSize: 11 }}>♻️</span>}
+                  {d.rester && !done && <span style={{ position: "absolute", top: -6, left: -6, fontSize: 11 }}>♻️</span>}
                   {d.gaester && <span style={{ position: "absolute", top: -6, right: -6, fontSize: 13 }}>🎉</span>}
                   <div style={{ fontSize: 20 }}>{d.emoji}</div>
                   <div>{d.day}</div>
@@ -412,18 +415,18 @@ export default function App() {
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 4, flexWrap: "wrap" }}>
                   <div style={{ fontSize: 20, fontWeight: "bold" }}>{d.day}</div>
                   <div style={{ fontSize: 13, opacity: 0.8 }}>{d.dato}</div>
-                  {d.rester && <span style={{ fontSize: 11, background: "rgba(255,255,255,0.25)", padding: "2px 8px", borderRadius: 20 }}>♻️ Rester fra {d.resterFra}</span>}
-                  {d.gaester && <span style={{ fontSize: 11, background: "rgba(255,255,255,0.3)", padding: "2px 8px", borderRadius: 20 }}>🎉 GÆSTER</span>}
+                  {d.rester && <span style={{ fontSize: 11, background: "rgba(255,255,255,0.25)", padding: "2px 8px", borderRadius: 20 }}>Rester fra {d.resterFra}</span>}
+                  {d.gaester && <span style={{ fontSize: 11, background: "rgba(255,255,255,0.3)", padding: "2px 8px", borderRadius: 20 }}>GAESTER</span>}
                 </div>
                 <div style={{ fontSize: 14, opacity: 0.9, fontStyle: "italic", marginTop: 4 }}>{d.meal}</div>
                 {d.bilkaTilbud && (
                   <div style={{ marginTop: 6, fontSize: 11, background: "rgba(255,255,255,0.15)", padding: "4px 10px", borderRadius: 20, display: "inline-block" }}>
-                    🏷️ {d.bilkaTilbud}
+                    Tilbud: {d.bilkaTilbud}
                   </div>
                 )}
                 <div style={{ marginTop: 8, display: "flex", gap: 8, flexWrap: "wrap" }}>
-                  <span style={{ fontSize: 11, background: "rgba(255,255,255,0.2)", padding: "3px 10px", borderRadius: 20 }}>⏱ {d.recipe.tid}</span>
-                  <span style={{ fontSize: 11, background: "rgba(255,255,255,0.2)", padding: "3px 10px", borderRadius: 20 }}>🔥 {d.naering.portion.kcal} kcal/pers.</span>
+                  <span style={{ fontSize: 11, background: "rgba(255,255,255,0.2)", padding: "3px 10px", borderRadius: 20 }}>Tid: {d.recipe.tid}</span>
+                  <span style={{ fontSize: 11, background: "rgba(255,255,255,0.2)", padding: "3px 10px", borderRadius: 20 }}>{d.naering.portion.kcal} kcal/pers.</span>
                 </div>
               </div>
               <div style={{ padding: "16px 20px" }}>
@@ -433,7 +436,7 @@ export default function App() {
                   const isChecked = checked[key];
                   return (
                     <div key={ii} style={{ display: "flex", alignItems: "center", gap: 10, padding: "9px 0", borderBottom: ii < d.ingredients.length - 1 ? "1px solid #f5f5f5" : "none", opacity: isChecked ? 0.4 : 1, transition: "opacity 0.2s" }}>
-                      <button onClick={() => toggleIngredient(activeDay, ii)} style={{ width: 22, height: 22, borderRadius: "50%", border: `2px solid ${isChecked ? d.accent : "#ddd"}`, background: isChecked ? d.accent : "white", cursor: "pointer", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: 13, transition: "all 0.2s" }}>{isChecked ? "✓" : ""}</button>
+                      <button onClick={() => toggleIngredient(activeDay, ii)} style={{ width: 22, height: 22, borderRadius: "50%", border: `2px solid ${isChecked ? d.accent : "#ddd"}`, background: isChecked ? d.accent : "white", cursor: "pointer", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: 13, transition: "all 0.2s" }}>{isChecked ? "v" : ""}</button>
                       <a href={ing.url} target="_blank" rel="noopener noreferrer" style={{ flex: 1, textDecoration: "none", color: "#2c2c2c", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                         <span style={{ fontSize: 14, fontWeight: 500, textDecoration: isChecked ? "line-through" : "none", color: isChecked ? "#aaa" : "#2c2c2c" }}>{ing.name}</span>
                         <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
@@ -445,10 +448,10 @@ export default function App() {
                   );
                 })}
                 <div style={{ marginTop: 16, display: "flex", gap: 8, flexWrap: "wrap" }}>
-                  <button onClick={() => setView("recipe")} style={{ background: d.accent, color: "white", border: "none", padding: "10px 16px", borderRadius: 10, cursor: "pointer", fontSize: 13, fontFamily: "inherit", fontWeight: "bold" }}>👨‍🍳 Opskrift</button>
-                  <button onClick={() => setView("naering")} style={{ background: d.color, color: d.accent, border: `2px solid ${d.accent}`, padding: "10px 16px", borderRadius: 10, cursor: "pointer", fontSize: 13, fontFamily: "inherit", fontWeight: "bold" }}>🥗 Næring</button>
-                  <a href="https://www.bilkatogo.dk/" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: "#1a3a2a", color: "white", padding: "10px 16px", borderRadius: 10, textDecoration: "none", fontSize: 13, fontFamily: "inherit", fontWeight: "bold" }}>🛒 BilkaToGo</a>
-                  <button onClick={() => d.ingredients.forEach((_, ii) => setChecked(prev => ({ ...prev, [`${activeDay}-${ii}`]: true })))} style={{ background: "#f5f5f5", border: "none", padding: "10px 16px", borderRadius: 10, cursor: "pointer", fontSize: 13, fontFamily: "inherit", color: "#555" }}>✓ Markér alle</button>
+                  <button onClick={() => setView("recipe")} style={{ background: d.accent, color: "white", border: "none", padding: "10px 16px", borderRadius: 10, cursor: "pointer", fontSize: 13, fontFamily: "inherit", fontWeight: "bold" }}>Opskrift</button>
+                  <button onClick={() => setView("naering")} style={{ background: d.color, color: d.accent, border: `2px solid ${d.accent}`, padding: "10px 16px", borderRadius: 10, cursor: "pointer", fontSize: 13, fontFamily: "inherit", fontWeight: "bold" }}>Naering</button>
+                  <a href="https://www.bilkatogo.dk/" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: "#1a3a2a", color: "white", padding: "10px 16px", borderRadius: 10, textDecoration: "none", fontSize: 13, fontFamily: "inherit", fontWeight: "bold" }}>BilkaToGo</a>
+                  <button onClick={() => d.ingredients.forEach((_, ii) => setChecked(prev => ({ ...prev, [`${activeDay}-${ii}`]: true })))} style={{ background: "#f5f5f5", border: "none", padding: "10px 16px", borderRadius: 10, cursor: "pointer", fontSize: 13, fontFamily: "inherit", color: "#555" }}>Marker alle</button>
                 </div>
               </div>
             </div>
@@ -464,16 +467,15 @@ export default function App() {
                 <div style={{ fontSize: 22, fontWeight: "bold", marginTop: 6 }}>{d.meal}</div>
                 <div style={{ fontSize: 13, opacity: 0.8, marginTop: 2 }}>{d.dato}</div>
                 <div style={{ marginTop: 10, display: "flex", gap: 8, flexWrap: "wrap" }}>
-                  <span style={{ fontSize: 12, background: "rgba(255,255,255,0.2)", padding: "4px 12px", borderRadius: 20 }}>⏱ {d.recipe.tid}</span>
-                  <span style={{ fontSize: 12, background: "rgba(255,255,255,0.2)", padding: "4px 12px", borderRadius: 20 }}>📊 {d.recipe.sværhed}</span>
-                  <span style={{ fontSize: 12, background: "rgba(255,255,255,0.2)", padding: "4px 12px", borderRadius: 20 }}>👥 4{d.gaester ? "+2 gæster" : ""} personer</span>
-                  {d.rester && <span style={{ fontSize: 12, background: "rgba(255,255,255,0.3)", padding: "4px 12px", borderRadius: 20 }}>♻️ Rester fra {d.resterFra}</span>}
-                  {d.gaester && <span style={{ fontSize: 12, background: "rgba(255,255,255,0.3)", padding: "4px 12px", borderRadius: 20 }}>🎉 Per &amp; Rikke</span>}
+                  <span style={{ fontSize: 12, background: "rgba(255,255,255,0.2)", padding: "4px 12px", borderRadius: 20 }}>Tid: {d.recipe.tid}</span>
+                  <span style={{ fontSize: 12, background: "rgba(255,255,255,0.2)", padding: "4px 12px", borderRadius: 20 }}>Niveau: {d.recipe.svaerhed}</span>
+                  <span style={{ fontSize: 12, background: "rgba(255,255,255,0.2)", padding: "4px 12px", borderRadius: 20 }}>4{d.gaester ? "+2 gaester" : ""} personer</span>
+                  {d.rester && <span style={{ fontSize: 12, background: "rgba(255,255,255,0.3)", padding: "4px 12px", borderRadius: 20 }}>Rester fra {d.resterFra}</span>}
                 </div>
               </div>
               <div style={{ padding: "20px" }}>
                 <p style={{ fontSize: 15, fontStyle: "italic", color: "#555", marginBottom: 20, lineHeight: 1.6 }}>{d.recipe.intro}</p>
-                <div style={{ fontSize: 11, letterSpacing: 2, textTransform: "uppercase", color: "#aaa", marginBottom: 14 }}>Fremgangsmåde</div>
+                <div style={{ fontSize: 11, letterSpacing: 2, textTransform: "uppercase", color: "#aaa", marginBottom: 14 }}>Fremgangsmaade</div>
                 {d.recipe.trin.map((trin, i) => (
                   <div key={i} style={{ display: "flex", gap: 14, marginBottom: 14, alignItems: "flex-start" }}>
                     <div style={{ width: 28, height: 28, borderRadius: "50%", background: d.accent, color: "white", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: "bold", flexShrink: 0 }}>{i + 1}</div>
@@ -491,7 +493,7 @@ export default function App() {
                   </div>
                 </div>
                 <div style={{ marginTop: 16 }}>
-                  <button onClick={() => setView("plan")} style={{ background: "#f5f5f5", border: "none", padding: "10px 16px", borderRadius: 10, cursor: "pointer", fontSize: 13, fontFamily: "inherit" }}>← Tilbage</button>
+                  <button onClick={() => setView("plan")} style={{ background: "#f5f5f5", border: "none", padding: "10px 16px", borderRadius: 10, cursor: "pointer", fontSize: 13, fontFamily: "inherit" }}>Tilbage</button>
                 </div>
               </div>
             </div>
@@ -505,7 +507,7 @@ export default function App() {
               <div style={{ background: d.accent, color: "white", padding: "16px 20px" }}>
                 <div style={{ fontSize: 28 }}>{d.emoji}</div>
                 <div style={{ fontSize: 18, fontWeight: "bold", marginTop: 4 }}>{d.meal}</div>
-                <div style={{ fontSize: 13, opacity: 0.8, marginTop: 2 }}>Næringsindhold</div>
+                <div style={{ fontSize: 13, opacity: 0.8, marginTop: 2 }}>Naeringsindhold</div>
               </div>
               <div style={{ padding: "16px 20px" }}>
                 <div style={{ display: "flex", gap: 0, background: "#f0f0f0", borderRadius: 10, padding: 3, marginBottom: 16 }}>
@@ -515,11 +517,11 @@ export default function App() {
                 </div>
                 <NaeringKort naering={d.naering} accent={d.accent} vis={naeringVis} />
                 <div style={{ marginTop: 24 }}>
-                  <div style={{ fontSize: 11, letterSpacing: 2, textTransform: "uppercase", color: "#aaa", marginBottom: 12 }}>Ugens næring (per dag/pers.)</div>
+                  <div style={{ fontSize: 11, letterSpacing: 2, textTransform: "uppercase", color: "#aaa", marginBottom: 12 }}>Ugens naering (per dag/pers.)</div>
                   {madplan.map((dag, i) => (
                     <div key={i} onClick={() => setActiveDay(i)} style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 12px", borderRadius: 10, cursor: "pointer", background: i === activeDay ? dag.color : "transparent", border: i === activeDay ? `2px solid ${dag.accent}` : "2px solid transparent", marginBottom: 6, transition: "all 0.2s" }}>
                       <span style={{ fontSize: 20 }}>{dag.emoji}</span>
-                      <span style={{ fontSize: 13, flex: 1, fontWeight: i === activeDay ? "bold" : "normal" }}>{dag.day}{dag.rester ? " ♻️" : ""}{dag.gaester ? " 🎉" : ""}</span>
+                      <span style={{ fontSize: 13, flex: 1, fontWeight: i === activeDay ? "bold" : "normal" }}>{dag.day}{dag.rester ? " (rester)" : ""}{dag.gaester ? " (gaester)" : ""}</span>
                       <span style={{ fontSize: 13, fontWeight: "bold", color: dag.accent }}>{dag.naering.portion.kcal} kcal</span>
                       <span style={{ fontSize: 11, color: "#e74c3c" }}>{dag.naering.portion.protein}g P</span>
                       <span style={{ fontSize: 11, color: "#3498db" }}>{dag.naering.portion.kulhy}g K</span>
@@ -544,24 +546,24 @@ export default function App() {
         {view === "list" && (
           <div>
             <div style={{ background: "#1a3a2a", color: "white", borderRadius: 12, padding: "14px 18px", marginBottom: 20, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <span style={{ fontWeight: "bold", fontSize: 15 }}>Samlet indkøbsliste — 7 dage</span>
+              <span style={{ fontWeight: "bold", fontSize: 15 }}>Samlet indkobsliste — 7 dage</span>
               <span style={{ fontSize: 13, opacity: 0.7 }}>{checkedItems}/{totalItems} afkrydset</span>
             </div>
             <div style={{ background: "#fff8e1", border: "2px solid #f39c12", borderRadius: 12, padding: "12px 16px", marginBottom: 16 }}>
-              <div style={{ fontWeight: "bold", color: "#e67e22", marginBottom: 4 }}>⚠️ Påskehensyn — HANDLE ALT IND ONSDAG 1. APRIL!</div>
-              <div style={{ fontSize: 13, color: "#555" }}>Bilka LUKKET: Skærtorsdag 2. april og Langfredag 3. april. Påskelørdag 4. april åbent igen (7-22). Husk: laks + asparges + tortillas + avocado til torsdag og fredag!</div>
+              <div style={{ fontWeight: "bold", color: "#e67e22", marginBottom: 4 }}>PAASKEHENSYN — HANDLER ALT IND ONSDAG 1. APRIL!</div>
+              <div style={{ fontSize: 13, color: "#555" }}>Bilka LUKKET: Skaertorsdag 2/4 og Langfredag 3/4. Paaskelørdag 4/4 åbent igen (7–22). Husk: laks + asparges + tortillas + avocado!</div>
             </div>
             <div style={{ background: "#e8f4f8", border: "2px solid #2980b9", borderRadius: 12, padding: "12px 16px", marginBottom: 20 }}>
-              <div style={{ fontWeight: "bold", color: "#2980b9", marginBottom: 4 }}>🎉 Mandag: Per &amp; Rikke til middag kl. 18!</div>
-              <div style={{ fontSize: 13, color: "#555" }}>Striploin til 6 personer (+ Karoline er hjemme fra Kap Verde). Husk ekstra vin og pynt til bordet.</div>
+              <div style={{ fontWeight: "bold", color: "#2980b9", marginBottom: 4 }}>Mandag: Per og Rikke til middag kl. 18!</div>
+              <div style={{ fontSize: 13, color: "#555" }}>Striploin til 6 personer + Karoline er hjemme fra Kap Verde. Husk ekstra vin!</div>
             </div>
             {madplan.map((day, di) => (
               <div key={di} style={{ marginBottom: 18 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
                   <span style={{ fontSize: 18 }}>{day.emoji}</span>
-                  <span style={{ fontSize: 13, fontWeight: "bold", color: day.accent }}>{day.day} — {day.meal.length > 50 ? day.meal.slice(0, 50) + "…" : day.meal}</span>
-                  {day.rester && <span style={{ fontSize: 11, background: "#f0f0f0", color: "#666", padding: "2px 8px", borderRadius: 20 }}>♻️ Rester</span>}
-                  {day.gaester && <span style={{ fontSize: 11, background: "#e8f4f8", color: "#2980b9", padding: "2px 8px", borderRadius: 20 }}>🎉 Gæster</span>}
+                  <span style={{ fontSize: 13, fontWeight: "bold", color: day.accent }}>{day.day} — {day.meal.length > 50 ? day.meal.slice(0, 50) + "..." : day.meal}</span>
+                  {day.rester && <span style={{ fontSize: 11, background: "#f0f0f0", color: "#666", padding: "2px 8px", borderRadius: 20 }}>Rester</span>}
+                  {day.gaester && <span style={{ fontSize: 11, background: "#e8f4f8", color: "#2980b9", padding: "2px 8px", borderRadius: 20 }}>Gaester</span>}
                 </div>
                 <div style={{ background: "white", borderRadius: 12, overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.05)", borderLeft: `4px solid ${day.accent}` }}>
                   {day.ingredients.map((ing, ii) => {
@@ -569,7 +571,7 @@ export default function App() {
                     const isChecked = checked[key];
                     return (
                       <div key={ii} style={{ display: "flex", alignItems: "center", gap: 10, padding: "9px 14px", borderBottom: ii < day.ingredients.length - 1 ? "1px solid #f8f8f8" : "none", opacity: isChecked ? 0.4 : 1, transition: "opacity 0.2s" }}>
-                        <button onClick={() => toggleIngredient(di, ii)} style={{ width: 20, height: 20, borderRadius: "50%", border: `2px solid ${isChecked ? day.accent : "#ddd"}`, background: isChecked ? day.accent : "white", cursor: "pointer", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: 11, transition: "all 0.2s" }}>{isChecked ? "✓" : ""}</button>
+                        <button onClick={() => toggleIngredient(di, ii)} style={{ width: 20, height: 20, borderRadius: "50%", border: `2px solid ${isChecked ? day.accent : "#ddd"}`, background: isChecked ? day.accent : "white", cursor: "pointer", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", color: "white", fontSize: 11, transition: "all 0.2s" }}>{isChecked ? "v" : ""}</button>
                         <a href={ing.url} target="_blank" rel="noopener noreferrer" style={{ flex: 1, textDecoration: "none", color: "#2c2c2c", display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: 14 }}>
                           <span style={{ textDecoration: isChecked ? "line-through" : "none", color: isChecked ? "#bbb" : "#2c2c2c" }}>{ing.name}</span>
                           <span style={{ display: "flex", gap: 6, alignItems: "center" }}>
@@ -584,7 +586,7 @@ export default function App() {
               </div>
             ))}
             <div style={{ textAlign: "center", marginTop: 20, paddingBottom: 20 }}>
-              <a href="https://www.bilkatogo.dk/" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: "#1a3a2a", color: "white", padding: "14px 28px", borderRadius: 12, textDecoration: "none", fontSize: 15, fontWeight: "bold", fontFamily: "inherit" }}>🛒 Gå til BilkaToGo</a>
+              <a href="https://www.bilkatogo.dk/" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: "#1a3a2a", color: "white", padding: "14px 28px", borderRadius: 12, textDecoration: "none", fontSize: 15, fontWeight: "bold", fontFamily: "inherit" }}>Ga til BilkaToGo</a>
             </div>
           </div>
         )}
