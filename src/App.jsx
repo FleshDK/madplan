@@ -126,7 +126,7 @@ const madplan = [
       trin: [
         "Rens mørbraden for sener. Krydr med salt og peber.",
         "Brun mørbraden godt i smør ved høj varme 2-3 min per side.",
-        "Tilsæt løg og svampe, steg 3 min. Tilsæt fløde og fond.",
+        "Steg bacon i tern til sprødt. Svits løg og peberfrugt i baconfedt 3 min. Tilsæt fløde og fond.",
         "Lad simre 15-20 min til mørbrad er gennemstegt (72°C indre temp).",
         "Kog kartofler i saltet vand 12-15 min.",
         "Damp eller kog bønner/broccoli 3-4 min.",
@@ -137,7 +137,8 @@ const madplan = [
       { name: "Svinemørbrad", qty: "ca. 700g", url: "https://www.bilkatogo.dk/s?query=svinemørbrad" },
       { name: "Kartofler", qty: "1 kg", url: "https://www.bilkatogo.dk/s?query=kartofler" },
       { name: "Piskefløde", qty: "2 dl", url: "https://www.bilkatogo.dk/s?query=fløde" },
-      { name: "Champignon", qty: "250g", url: "https://www.bilkatogo.dk/s?query=champignon" },
+      { name: "Bacon (skiver)", qty: "150g", url: "https://www.bilkatogo.dk/s?query=bacon" },
+      { name: "Peberfrugt (rød eller gul)", qty: "1 stk", url: "https://www.bilkatogo.dk/s?query=peberfrugt" },
       { name: "Løg", qty: "1 stk", url: "https://www.bilkatogo.dk/s?query=loeg" },
       { name: "Svine- eller hønsefond", qty: "2 dl", url: "https://www.bilkatogo.dk/s?query=fond" },
       { name: "Grønne bønner eller broccoli", qty: "300g", url: "https://www.bilkatogo.dk/s?query=grøntsager" },
