@@ -1,90 +1,86 @@
 import { useState } from "react";
 
-// Madplan uge 16 · 2026 · 13.–18. april
-// Genereret af MasterKOK 👨‍🍳 søndag 12. april 2026 kl. 08:00
+// Madplan uge 16 · 2026 · 13.–19. april
+// Opdateret af Odin 🪬 onsdag 15. april 2026
 
 const madplan = [
   {
     day: "Mandag",
     dato: "13. april",
-    emoji: "🥩",
-    meal: "Frikadeller af kalve-flæskefars med nye kartofler og brun sauce",
+    emoji: "🐔",
+    meal: "Hel kylling med ris og karrysovs",
     color: "#fff8e1",
     accent: "#e67e22",
-    bilkaTilbud: "Nye kartofler (Bilka) + Knorr sauce (Rema)",
-    fryser: true,
     naering: {
-      hel: { kcal: 3200, protein: 240, kulhy: 280, fedt: 120 },
-      portion: { kcal: 800, protein: 60, kulhy: 70, fedt: 30 },
+      hel: { kcal: 3200, protein: 240, kulhy: 280, fedt: 100 },
+      portion: { kcal: 800, protein: 60, kulhy: 70, fedt: 25 },
     },
     recipe: {
-      tid: "35 min",
+      tid: "1 time 30 min",
       svaerhed: "Let",
-      intro: "Klassisk dansk hverdagsmad! Kalve-flæskefarsene fra fryseren laver vi om til saftige frikadeller. Brun sauce fra Knorr og nye kartofler. Lav ekstra frikadeller til tirsdag!",
+      intro: "En klassisk hel kylling i ovnen — sprød skind, mørt kød og en lækker karrysovs. Ris koges ved siden af. Perfekt mandag-klassiker!",
       trin: [
-        "Optø kalve-flæskefars natten over eller i koldt vand (1-2 timer).",
-        "Bland farsen med 1 æg, 1 fintrevet løg, 2 spsk mel, salt, peber og lidt allehånde.",
-        "Form store, flade frikadeller med en fugtig spiseske.",
-        "Steg i rigeligt smør ved medium varme — ca. 5 min per side til gyldne.",
-        "Lav brun sauce: følg Knorr-pose anvisning, tilsæt lidt sødmælk for fylde.",
-        "Kog nye kartofler med skræl ca. 12-15 min i saltet vand.",
-        "Server med kartofler, brun sauce og rødkål. Gem 4-5 frikadeller til tirsdag!",
+        "Forvarm ovnen til 200°. Krydr kyllingen indvendigt og udvendigt med salt, peber, hvidløg og smør under skindet.",
+        "Læg kyllingen på en rist over en bradepande. Bag 1 time 15 min til saft løber klar.",
+        "Hvil kyllingen 10 min inden udskæring.",
+        "Kog basmatiris efter pakke-anvisning.",
+        "Lav karrysovs: svits løg, tilsæt karry, spæd med hønsefond og fløde. Smag til med salt og lidt citron.",
+        "Server kylling, ris og karrysovs. God appetit! 🐔",
       ],
     },
     ingredients: [
-      { name: "Kalve-flæskefars (FRYSER! 🧊)", qty: "ca. 600g", url: "https://www.bilkatogo.dk/s?query=hakket+koed" },
-      { name: "Nye kartofler (Bilka tilbud)", qty: "1 kg", url: "https://www.bilkatogo.dk/s?query=kartofler" },
-      { name: "Knorr brun sauce (Rema tilbud)", qty: "1-2 poser", url: "https://www.bilkatogo.dk/s?query=brun+sauce" },
-      { name: "Æg", qty: "1 stk", url: "https://www.bilkatogo.dk/s?query=aeg" },
+      { name: "Hel kylling", qty: "ca. 1,5 kg", url: "https://www.bilkatogo.dk/s?query=hel+kylling" },
+      { name: "Basmatiris", qty: "300g", url: "https://www.bilkatogo.dk/s?query=basmatiris" },
       { name: "Løg", qty: "1 stk", url: "https://www.bilkatogo.dk/s?query=loeg" },
-      { name: "Hvedemel", qty: "2 spsk", url: "https://www.bilkatogo.dk/s?query=hvedemel" },
-      { name: "Smør/Lurpak", qty: "75g", url: "https://www.bilkatogo.dk/s?query=lurpak" },
-      { name: "Rødkål (glas, tilbehør)", qty: "1 glas", url: "https://www.bilkatogo.dk/s?query=roedkaal" },
+      { name: "Karrypulver", qty: "2 spsk", url: "https://www.bilkatogo.dk/s?query=karry" },
+      { name: "Hønsefond", qty: "2 dl", url: "https://www.bilkatogo.dk/s?query=fond" },
+      { name: "Piskefløde", qty: "2 dl", url: "https://www.bilkatogo.dk/s?query=fløde" },
+      { name: "Smør/Lurpak", qty: "50g", url: "https://www.bilkatogo.dk/s?query=lurpak" },
+      { name: "Hvidløg", qty: "3 fed", url: "https://www.bilkatogo.dk/s?query=hvidloeg" },
     ],
   },
   {
     day: "Tirsdag",
     dato: "14. april",
-    emoji: "🍽️",
-    meal: "Frikadeller m. kartoffelsalat (rester fra mandag)",
-    rester: true,
-    resterFra: "Mandag",
+    emoji: "🥩",
+    meal: "Marineret kamfilet med bagte kartofler og salat",
     color: "#fdf2f8",
     accent: "#8e44ad",
     naering: {
-      hel: { kcal: 2800, protein: 200, kulhy: 240, fedt: 100 },
-      portion: { kcal: 700, protein: 50, kulhy: 60, fedt: 25 },
+      hel: { kcal: 2800, protein: 220, kulhy: 200, fedt: 100 },
+      portion: { kcal: 700, protein: 55, kulhy: 50, fedt: 25 },
     },
     recipe: {
-      tid: "15 min",
+      tid: "45 min (+ marinering)",
       svaerhed: "Let",
-      intro: "Frikadellerne fra mandag er endnu bedre dagen efter! Vi laver en hurtig kartoffelsalat og er færdige på et kvarter.",
+      intro: "Saftig marineret kamfilet — mariner gerne natten over. Bagte kartofler er nemme og smager fantastisk. Frisk salat til.",
       trin: [
-        "Varm frikadellerne i ovnen ved 180° i 10 min — de bliver sprøde igen!",
-        "Bland kartofler fra mandag med creme fraiche, dijonsennep, hakket rødløg, persille.",
-        "Krydr kartoffelsalaten med salt og peber.",
-        "Server frikadeller med kartoffelsalat og lidt rødkål fra mandag.",
-        "Færdigt på et kvarter — perfekt tirsdagsaftensmad! 💪",
+        "Mariner kamfileten natten over (eller min. 2 timer): olivenolie, hvidløg, sennep, timian, salt og peber.",
+        "Forvarm ovnen til 200°. Skær kartofler i både, vend i olie, salt og peber.",
+        "Bag kartoflerne 35-40 min til gyldne og sprøde.",
+        "Steg kamfileten ved høj varme 3-4 min per side. Hvil 5 min.",
+        "Lav enkel salat: romaine, tomater, agurk, rødløg og dressing.",
+        "Skær kamfileten i skiver og server med bagte kartofler og salat. 🥩",
       ],
     },
     ingredients: [
-      { name: "Frikadeller (rester fra mandag)", qty: "4-5 stk", url: "https://www.bilkatogo.dk/s?query=hakket+koed" },
-      { name: "Kartofler (rester fra mandag)", qty: "300-400g", url: "https://www.bilkatogo.dk/s?query=kartofler" },
-      { name: "Creme fraiche 18%", qty: "1 dl", url: "https://www.bilkatogo.dk/s?query=creme+fraiche" },
+      { name: "Kamfilet", qty: "ca. 700g", url: "https://www.bilkatogo.dk/s?query=kamfilet" },
+      { name: "Kartofler", qty: "1 kg", url: "https://www.bilkatogo.dk/s?query=kartofler" },
+      { name: "Romaine/isbergsalat", qty: "1 hoved", url: "https://www.bilkatogo.dk/s?query=salat" },
+      { name: "Tomater", qty: "200g", url: "https://www.bilkatogo.dk/s?query=tomater" },
+      { name: "Agurk", qty: "½ stk", url: "https://www.bilkatogo.dk/s?query=agurk" },
+      { name: "Rødløg", qty: "1 stk", url: "https://www.bilkatogo.dk/s?query=roedloeg" },
+      { name: "Olivenolie", qty: "3 spsk", url: "https://www.bilkatogo.dk/s?query=olivenolie" },
       { name: "Dijonsennep", qty: "1 spsk", url: "https://www.bilkatogo.dk/s?query=dijonsennep" },
-      { name: "Rødløg", qty: "½ stk", url: "https://www.bilkatogo.dk/s?query=roedloeg" },
-      { name: "Persille (frisk eller tørret)", qty: "til drys", url: "https://www.bilkatogo.dk/s?query=persille" },
     ],
   },
   {
     day: "Onsdag",
     dato: "15. april",
     emoji: "🌮",
-    meal: "Kyllingebryst strimler i tex mex wrap",
+    meal: "Tex mex wraps med kyllingebrystfilet",
     color: "#eafaf1",
     accent: "#27ae60",
-    bilkaTilbud: "Danpo kyllingebrystfilet (Bilka) + Rema Tex Mex kit",
-    fryser: true,
     naering: {
       hel: { kcal: 2880, protein: 256, kulhy: 240, fedt: 80 },
       portion: { kcal: 720, protein: 64, kulhy: 60, fedt: 20 },
@@ -92,9 +88,8 @@ const madplan = [
     recipe: {
       tid: "25 min",
       svaerhed: "Let",
-      intro: "Kyllingebrysterne fra fryseren bliver til saftige tex mex strimler! Rema har Tex Mex kit på tilbud. Alle bygger selv — hyggeligt onsdagsaftensydisk!",
+      intro: "Kyllingebrysterne skæres i strimler og krydres med tacokrydderi. Alle bygger selv — hyggeligt onsdagsaftensmad!",
       trin: [
-        "Optø kyllingebrysterne på forhånd (natten over i køleskabet er bedst).",
         "Skær kyllingebryst i strimler. Krydr med tacokrydderi, paprika, salt og peber.",
         "Steg strimlerne ved høj varme i olie ca. 4-5 min til gyldne og gennemstegte.",
         "Varm tortillaer i tør pande 30 sek per side.",
@@ -103,122 +98,147 @@ const madplan = [
       ],
     },
     ingredients: [
-      { name: "Kyllingebryst (FRYSER! 🧊)", qty: "ca. 700g", url: "https://www.bilkatogo.dk/s?query=kyllingebryst" },
-      { name: "Rema Tex Mex kit (tortillas + krydderi)", qty: "1 kit", url: "https://www.bilkatogo.dk/s?query=tex+mex" },
-      { name: "Guacamole (færdig)", qty: "1 bæger", url: "https://www.bilkatogo.dk/s?query=guacamole" },
+      { name: "Kyllingebrystfilet", qty: "ca. 700g", url: "https://www.bilkatogo.dk/s?query=kyllingebryst" },
+      { name: "Tex Mex kit (tortillas + krydderi)", qty: "1 kit", url: "https://www.bilkatogo.dk/s?query=tex+mex" },
+      { name: "Guacamole", qty: "1 bæger", url: "https://www.bilkatogo.dk/s?query=guacamole" },
+      { name: "Salsa", qty: "1 glas", url: "https://www.bilkatogo.dk/s?query=salsa" },
       { name: "Majs (dåse)", qty: "1 dåse", url: "https://www.bilkatogo.dk/s?query=majs" },
       { name: "Romaine/isbergsalat", qty: "½ hoved", url: "https://www.bilkatogo.dk/s?query=salat" },
       { name: "Rødløg", qty: "1 stk", url: "https://www.bilkatogo.dk/s?query=roedloeg" },
       { name: "Creme fraiche 18%", qty: "1 bøtte", url: "https://www.bilkatogo.dk/s?query=creme+fraiche" },
-      { name: "Tapastomater (Rema tilbud)", qty: "200g", url: "https://www.bilkatogo.dk/s?query=tomater" },
     ],
   },
   {
     day: "Torsdag",
     dato: "16. april",
-    emoji: "🐟",
-    meal: "Laks i ovn med spinat og nye kartofler",
+    emoji: "🥩",
+    meal: "Svinemørbrad med flødesovs, kartofler og grønt",
     color: "#e8f4f8",
     accent: "#2980b9",
-    bilkaTilbud: "Ferske laksefileter (Rema) + spinat (Rema) + nye kartofler (Bilka)",
     naering: {
-      hel: { kcal: 2640, protein: 232, kulhy: 160, fedt: 112 },
-      portion: { kcal: 660, protein: 58, kulhy: 40, fedt: 28 },
+      hel: { kcal: 2800, protein: 240, kulhy: 200, fedt: 120 },
+      portion: { kcal: 700, protein: 60, kulhy: 50, fedt: 30 },
     },
     recipe: {
-      tid: "30 min (heraf 20 min i ovnen)",
+      tid: "40 min",
       svaerhed: "Let",
-      intro: "Laks er sundt, hurtigt og smager fantastisk. Rema har ferske laksefileter på tilbud. Med frisk spinat og nye kartofler er det ugens sundeste ret!",
+      intro: "Svinemørbrad er mørt og hurtigt at tilberede. Flødesovsen løfter retten til noget særligt. En rigtig dansk klassiker!",
       trin: [
-        "Forvarm ovnen til 200°. Kog nye kartofler i saltet vand ca. 12-15 min.",
-        "Læg laksefileter i et ovnfast fad. Krydr med citron, dild, salt og peber.",
-        "Dryp lidt olivenolie over. Bag 18-20 min til fisken flager let.",
-        "Varm spinat i en pande med lidt smør og hvidløg — 2-3 min til visnet.",
-        "Krydr spinaten med salt, peber og citronsaft.",
-        "Server laks, spinat og kartofler. Drys frisk dild over. Sundt og lækkert! 🐟",
+        "Rens mørbraden for sener. Krydr med salt og peber.",
+        "Brun mørbraden godt i smør ved høj varme 2-3 min per side.",
+        "Tilsæt løg og svampe, steg 3 min. Tilsæt fløde og fond.",
+        "Lad simre 15-20 min til mørbrad er gennemstegt (72°C indre temp).",
+        "Kog kartofler i saltet vand 12-15 min.",
+        "Damp eller kog bønner/broccoli 3-4 min.",
+        "Smag sovsen til med salt, peber og lidt sennep. Server straks! 🥩",
       ],
     },
     ingredients: [
-      { name: "Ferske laksefileter (Rema tilbud)", qty: "4 stk ca. 600g", url: "https://www.bilkatogo.dk/s?query=laks" },
-      { name: "Spinat (Rema tilbud)", qty: "200g pose", url: "https://www.bilkatogo.dk/s?query=spinat" },
-      { name: "Nye kartofler (Bilka tilbud)", qty: "800g", url: "https://www.bilkatogo.dk/s?query=kartofler" },
-      { name: "Citron", qty: "1 stk", url: "https://www.bilkatogo.dk/s?query=citron" },
-      { name: "Dild (frisk eller tørret)", qty: "1 bundt", url: "https://www.bilkatogo.dk/s?query=dild" },
-      { name: "Hvidløg", qty: "2 fed", url: "https://www.bilkatogo.dk/s?query=hvidloeg" },
-      { name: "Olivenolie", qty: "2 spsk", url: "https://www.bilkatogo.dk/s?query=olivenolie" },
-      { name: "Smør/Lurpak", qty: "25g", url: "https://www.bilkatogo.dk/s?query=lurpak" },
+      { name: "Svinemørbrad", qty: "ca. 700g", url: "https://www.bilkatogo.dk/s?query=svinemørbrad" },
+      { name: "Kartofler", qty: "1 kg", url: "https://www.bilkatogo.dk/s?query=kartofler" },
+      { name: "Piskefløde", qty: "2 dl", url: "https://www.bilkatogo.dk/s?query=fløde" },
+      { name: "Champignon", qty: "250g", url: "https://www.bilkatogo.dk/s?query=champignon" },
+      { name: "Løg", qty: "1 stk", url: "https://www.bilkatogo.dk/s?query=loeg" },
+      { name: "Svine- eller hønsefond", qty: "2 dl", url: "https://www.bilkatogo.dk/s?query=fond" },
+      { name: "Grønne bønner eller broccoli", qty: "300g", url: "https://www.bilkatogo.dk/s?query=grøntsager" },
+      { name: "Smør/Lurpak", qty: "50g", url: "https://www.bilkatogo.dk/s?query=lurpak" },
     ],
   },
   {
     day: "Fredag",
     dato: "17. april",
-    emoji: "🍖",
-    meal: "Frilandsgris spareribs med coleslaw og brød",
+    emoji: "🌭",
+    meal: "Grillpølser",
     color: "#fdedec",
     accent: "#c0392b",
-    bilkaTilbud: "Frilandsgris spareribs (Rema tilbud!)",
     naering: {
-      hel: { kcal: 3600, protein: 256, kulhy: 160, fedt: 200 },
-      portion: { kcal: 900, protein: 64, kulhy: 40, fedt: 50 },
-    },
-    recipe: {
-      tid: "2,5 timer (passer sig selv i ovnen!)",
-      svaerhed: "Let — bare tålmodighed!",
-      intro: "Fredag er ribs-dag! Rema har frilandsgris spareribs på tilbud. Low and slow i ovnen — smid dem ind og hent dem ud 2,5 time senere møre og saftige. Det er fredagskomfort i verdensklasse!",
-      trin: [
-        "Forvarm ovnen til 150°. Dup ribsene tørre med køkkenrulle.",
-        "Gnid ribs med BBQ-krydderi: brun sukker, paprika, hvidløgspulver, salt, peber.",
-        "Pak ribsene stramt ind i aluminiumsfolie. Bag 2 timer ved 150°.",
-        "Pak folien op, pensl med BBQ-sauce. Skru op til 220° og bag 15-20 min.",
-        "Lav coleslaw imens: snit hvidkål fint, bland med revet gulerod, majs, mayo.",
-        "Server med godt landbrød og rigelig BBQ-sauce. God fredag! 🍖🎉",
-      ],
-    },
-    ingredients: [
-      { name: "Frilandsgris spareribs (Rema tilbud!)", qty: "1,5 kg", url: "https://www.bilkatogo.dk/s?query=spareribs" },
-      { name: "BBQ-sauce", qty: "1 flaske", url: "https://www.bilkatogo.dk/s?query=bbq+sauce" },
-      { name: "Hvidkål (til coleslaw)", qty: "1/4 hoved", url: "https://www.bilkatogo.dk/s?query=hvidkaal" },
-      { name: "Gulerødder (til coleslaw)", qty: "2 stk", url: "https://www.bilkatogo.dk/s?query=gulerod" },
-      { name: "Mayonnaise", qty: "3 spsk", url: "https://www.bilkatogo.dk/s?query=mayo" },
-      { name: "Majs (dåse)", qty: "1/2 dåse", url: "https://www.bilkatogo.dk/s?query=majs" },
-      { name: "Landbrød (Hatting, Rema tilbud)", qty: "1 stk", url: "https://www.bilkatogo.dk/s?query=broed" },
-      { name: "Brun sukker + paprika + krydderier", qty: "til rub", url: "https://www.bilkatogo.dk/s?query=krydderier" },
-    ],
-  },
-  {
-    day: "Lørdag",
-    dato: "18. april - 3 pers.!",
-    emoji: "🌭",
-    meal: "Grillpølser + pizza til 3 — Maya er på personaledag",
-    color: "#f0f8ff",
-    accent: "#3498db",
-    bilkaTilbud: "Dr. Oetker Suprema pizza (Rema) + Steff Houlberg pølser (Bilka)",
-    fryser: true,
-    personerCount: 3,
-    naering: {
-      hel: { kcal: 2700, protein: 120, kulhy: 300, fedt: 120 },
-      portion: { kcal: 900, protein: 40, kulhy: 100, fedt: 40 },
+      hel: { kcal: 2400, protein: 120, kulhy: 200, fedt: 120 },
+      portion: { kcal: 600, protein: 30, kulhy: 50, fedt: 30 },
     },
     recipe: {
       tid: "20 min",
       svaerhed: "Meget let",
-      intro: "⚠️ Maya er på personaledag og er IKKE hjemme! Lars, Louise og Karoline får hygge-aften med grillpølser fra fryseren og Dr. Oetker pizza fra Rema. Nem, god og lørdag-hyggelig!",
+      intro: "Fredag — simpelt og hyggeligt! Grillpølser, hotdog-brød og alle de gode tilbehør. Klassisk fredagshygge!",
       trin: [
-        "Tag grillpølserne fra fryseren ud et par timer i forvejen (eller tø op i koldt vand).",
-        "Forvarm ovnen til 220° (til pizza).",
         "Grill eller steg pølserne i panden til gyldne og gennemvarme — ca. 8-10 min.",
-        "Smid pizzaen i ovnen samtidig — følg anvisning på pakken (typisk 12-15 min).",
-        "Skær pizzaen i stykker og server med kold sodavand og grillpølserne.",
-        "Tænd en god film og nyd det! 🎬 God aften til de 3! 🎉",
+        "Varm hotdog-brød i ovnen 3-4 min ved 180°.",
+        "Sæt tilbehør på bordet: ketchup, sennep, ristede løg, rå løg, remoulade.",
+        "Byg jeres hotdogs og nyd fredagen! 🌭🎉",
       ],
     },
     ingredients: [
-      { name: "Grillpølser (FRYSER! 🧊)", qty: "1 pk (til 3 pers.)", url: "https://www.bilkatogo.dk/s?query=groelpoelser" },
-      { name: "Dr. Oetker Suprema pizza (Rema tilbud)", qty: "1-2 stk", url: "https://www.bilkatogo.dk/s?query=pizza" },
-      { name: "Hotdog brød (til pølser)", qty: "3-4 stk", url: "https://www.bilkatogo.dk/s?query=hotdog+broed" },
+      { name: "Grillpølser", qty: "1 pk", url: "https://www.bilkatogo.dk/s?query=grillpoelsesr" },
+      { name: "Hotdog-brød", qty: "1 pk", url: "https://www.bilkatogo.dk/s?query=hotdog+broed" },
       { name: "Ketchup og sennep", qty: "til servering", url: "https://www.bilkatogo.dk/s?query=ketchup" },
-      { name: "Ristede løg (til pølser)", qty: "1 pose", url: "https://www.bilkatogo.dk/s?query=ristede+loeg" },
-      { name: "Sodavand (fx Pepsi Max, Rema tilbud)", qty: "1,5L", url: "https://www.bilkatogo.dk/s?query=sodavand" },
+      { name: "Ristede løg", qty: "1 pose", url: "https://www.bilkatogo.dk/s?query=ristede+loeg" },
+      { name: "Rå løg", qty: "1 stk", url: "https://www.bilkatogo.dk/s?query=loeg" },
+      { name: "Remoulade", qty: "1 tube", url: "https://www.bilkatogo.dk/s?query=remoulade" },
+    ],
+  },
+  {
+    day: "Lørdag",
+    dato: "18. april",
+    emoji: "🥘",
+    meal: "Simregryde med skært oksekød og rodfrugter",
+    color: "#f0f8ff",
+    accent: "#3498db",
+    naering: {
+      hel: { kcal: 3200, protein: 280, kulhy: 200, fedt: 120 },
+      portion: { kcal: 800, protein: 70, kulhy: 50, fedt: 30 },
+    },
+    recipe: {
+      tid: "2,5-3 timer (passer sig selv!)",
+      svaerhed: "Let",
+      intro: "Lørdag er perfekt til en simregryde — smid det hele i og lad det passe sig selv! Skært oksekød med rodfrugter er mættende og smagfuldt. Lav ekstra til søndag!",
+      trin: [
+        "Skær oksekødet i store tern. Brun godt i olie i en gryde ved høj varme — i portioner!",
+        "Svits løg, gulerødder og selleri i 3 min.",
+        "Tilsæt tomatpuré, oksefond, laurbærblad, timian og rosmarin.",
+        "Skær rodfrugter (persillerod, pastinak, kartofler) i tern og tilsæt.",
+        "Tilsæt vand til det lige dækker. Bring i kog, skru ned og lad simre 2-2,5 timer.",
+        "Smag til med salt og peber. Server med godt brød. 🥘",
+        "Lav ekstra — søndagens retter er klar!",
+      ],
+    },
+    ingredients: [
+      { name: "Skært oksekød (grydesteg)", qty: "1 kg", url: "https://www.bilkatogo.dk/s?query=oksekoed+grydesteg" },
+      { name: "Gulerødder", qty: "4 stk", url: "https://www.bilkatogo.dk/s?query=gulerod" },
+      { name: "Persillerod eller pastinak", qty: "2 stk", url: "https://www.bilkatogo.dk/s?query=persillerod" },
+      { name: "Kartofler", qty: "500g", url: "https://www.bilkatogo.dk/s?query=kartofler" },
+      { name: "Løg", qty: "2 stk", url: "https://www.bilkatogo.dk/s?query=loeg" },
+      { name: "Selleri", qty: "2 stængler", url: "https://www.bilkatogo.dk/s?query=selleri" },
+      { name: "Oksefond", qty: "4 dl", url: "https://www.bilkatogo.dk/s?query=oksefond" },
+      { name: "Tomatpuré", qty: "2 spsk", url: "https://www.bilkatogo.dk/s?query=tomatpure" },
+      { name: "Godt brød (til servering)", qty: "1 stk", url: "https://www.bilkatogo.dk/s?query=broed" },
+    ],
+  },
+  {
+    day: "Søndag",
+    dato: "19. april",
+    emoji: "🍲",
+    meal: "Rester fra simregryde",
+    rester: true,
+    resterFra: "Lørdag",
+    color: "#fdf2f8",
+    accent: "#8e44ad",
+    naering: {
+      hel: { kcal: 2800, protein: 240, kulhy: 180, fedt: 100 },
+      portion: { kcal: 700, protein: 60, kulhy: 45, fedt: 25 },
+    },
+    recipe: {
+      tid: "15 min (opvarmning)",
+      svaerhed: "Meget let",
+      intro: "Simregryde smager endnu bedre dagen efter! Varm op og server med frisk brød. Nemmeste søndag nogensinde.",
+      trin: [
+        "Varm gryden langsomt op ved lav-medium varme — rør jævnligt.",
+        "Smag til og juster med lidt salt og peber om nødvendigt.",
+        "Hvis gryden er blevet for tyk, tilsæt lidt vand eller fond.",
+        "Server med frisk godt brød. Simpelt og lækkert! 🍲",
+      ],
+    },
+    ingredients: [
+      { name: "Simregryde (rester fra lørdag)", qty: "hele gryden", url: "https://www.bilkatogo.dk/s?query=oksekoed" },
+      { name: "Godt brød (evt. frisk)", qty: "1 stk", url: "https://www.bilkatogo.dk/s?query=broed" },
     ],
   },
 ];
@@ -298,7 +318,7 @@ export default function App() {
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
           <div>
             <div style={{ fontSize: 10, letterSpacing: 3, textTransform: "uppercase", opacity: 0.5 }}>Uge 16 · 2026</div>
-            <div style={{ fontSize: 18, fontWeight: "bold" }}>Bruslund Madplan — 13.–18. april</div>
+            <div style={{ fontSize: 18, fontWeight: "bold" }}>Bruslund Madplan — 13.–19. april</div>
           </div>
           <div style={{ textAlign: "right" }}>
             <div style={{ fontSize: 10, opacity: 0.5, marginBottom: 3 }}>Indkobsfremgang</div>
@@ -339,7 +359,6 @@ export default function App() {
                 }}>
                   {done && <span style={{ position: "absolute", top: -6, right: -6, fontSize: 13 }}>✅</span>}
                   {d.rester && !done && <span style={{ position: "absolute", top: -6, left: -6, fontSize: 11 }}>♻️</span>}
-                  {d.fryser && !d.rester && !done && <span style={{ position: "absolute", top: -6, right: -6, fontSize: 11 }}>🧊</span>}
                   <div style={{ fontSize: 20 }}>{d.emoji}</div>
                   <div>{d.day}</div>
                   <div style={{ fontSize: 10, opacity: 0.75 }}>{dayChecked}/{d.ingredients.length}</div>
@@ -359,15 +378,8 @@ export default function App() {
                   <div style={{ fontSize: 20, fontWeight: "bold" }}>{d.day}</div>
                   <div style={{ fontSize: 13, opacity: 0.8 }}>{d.dato}</div>
                   {d.rester && <span style={{ fontSize: 11, background: "rgba(255,255,255,0.25)", padding: "2px 8px", borderRadius: 20 }}>Rester fra {d.resterFra}</span>}
-                  {d.fryser && !d.rester && <span style={{ fontSize: 11, background: "rgba(255,255,255,0.25)", padding: "2px 8px", borderRadius: 20 }}>🧊 Fryservare!</span>}
-                  {d.personerCount && <span style={{ fontSize: 11, background: "rgba(255,100,0,0.4)", padding: "2px 8px", borderRadius: 20 }}>⚠️ {d.personerCount} pers. kun!</span>}
                 </div>
                 <div style={{ fontSize: 14, opacity: 0.9, fontStyle: "italic", marginTop: 4 }}>{d.meal}</div>
-                {d.bilkaTilbud && (
-                  <div style={{ marginTop: 6, fontSize: 11, background: "rgba(255,255,255,0.15)", padding: "4px 10px", borderRadius: 20, display: "inline-block" }}>
-                    Tilbud: {d.bilkaTilbud}
-                  </div>
-                )}
                 <div style={{ marginTop: 8, display: "flex", gap: 8, flexWrap: "wrap" }}>
                   <span style={{ fontSize: 11, background: "rgba(255,255,255,0.2)", padding: "3px 10px", borderRadius: 20 }}>Tid: {d.recipe.tid}</span>
                   <span style={{ fontSize: 11, background: "rgba(255,255,255,0.2)", padding: "3px 10px", borderRadius: 20 }}>{d.naering.portion.kcal} kcal/pers.</span>
@@ -413,7 +425,7 @@ export default function App() {
                 <div style={{ marginTop: 10, display: "flex", gap: 8, flexWrap: "wrap" }}>
                   <span style={{ fontSize: 12, background: "rgba(255,255,255,0.2)", padding: "4px 12px", borderRadius: 20 }}>Tid: {d.recipe.tid}</span>
                   <span style={{ fontSize: 12, background: "rgba(255,255,255,0.2)", padding: "4px 12px", borderRadius: 20 }}>Niveau: {d.recipe.svaerhed}</span>
-                  <span style={{ fontSize: 12, background: "rgba(255,255,255,0.2)", padding: "4px 12px", borderRadius: 20 }}>{d.personerCount || 4} personer</span>
+                  <span style={{ fontSize: 12, background: "rgba(255,255,255,0.2)", padding: "4px 12px", borderRadius: 20 }}>4 personer</span>
                   {d.rester && <span style={{ fontSize: 12, background: "rgba(255,255,255,0.3)", padding: "4px 12px", borderRadius: 20 }}>Rester fra {d.resterFra}</span>}
                 </div>
               </div>
@@ -473,21 +485,12 @@ export default function App() {
               <span style={{ fontWeight: "bold", fontSize: 15 }}>Indkobsliste — uge 16</span>
               <span style={{ fontSize: 13, opacity: 0.7 }}>{checkedItems}/{totalItems} afkrydset</span>
             </div>
-            <div style={{ background: "#e8f5e9", border: "2px solid #27ae60", borderRadius: 12, padding: "12px 16px", marginBottom: 16 }}>
-              <div style={{ fontWeight: "bold", color: "#27ae60", marginBottom: 4 }}>🧊 Brug fryseren!</div>
-              <div style={{ fontSize: 13, color: "#555" }}>Kalve-flæskefars (man), Kyllingebryst (ons), Grillpølser (lør) — alle fra fryseren!</div>
-            </div>
-            <div style={{ background: "#fff3e0", border: "2px solid #e67e22", borderRadius: 12, padding: "12px 16px", marginBottom: 20 }}>
-              <div style={{ fontWeight: "bold", color: "#e67e22", marginBottom: 4 }}>⚠️ Lørdag 18/4 — KUN 3 PERSONER</div>
-              <div style={{ fontSize: 13, color: "#555" }}>Maya er på personaledag. Lav mad til Lars, Louise og Karoline.</div>
-            </div>
             {madplan.map((day, di) => (
               <div key={di} style={{ marginBottom: 18 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
                   <span style={{ fontSize: 18 }}>{day.emoji}</span>
                   <span style={{ fontSize: 13, fontWeight: "bold", color: day.accent }}>{day.day} — {day.meal.length > 45 ? day.meal.slice(0, 45) + "..." : day.meal}</span>
                   {day.rester && <span style={{ fontSize: 11, background: "#f0f0f0", color: "#666", padding: "2px 8px", borderRadius: 20 }}>Rester</span>}
-                  {day.fryser && !day.rester && <span style={{ fontSize: 11, background: "#e8f5e9", color: "#27ae60", padding: "2px 8px", borderRadius: 20 }}>🧊 Fryser</span>}
                 </div>
                 <div style={{ background: "white", borderRadius: 12, overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.05)", borderLeft: `4px solid ${day.accent}` }}>
                   {day.ingredients.map((ing, ii) => {
