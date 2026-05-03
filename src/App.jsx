@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-// Madplan uge 19 · 2026 · 4. maj – 10. maj
-// Opdateret af MasterKOK 👨‍🍳 mandag 3. maj 2026
+// Madplan uge 19 · 2026 · 3. maj – 10. maj
+// Opdateret af MasterKOK 👨‍🍳 søndag 3. maj 2026
 // Baseret på Bilka-tilbud og familiens præferencer
 
 const madplan = [
   {
     day: "Søndag",
-    dato: "4. maj",
+    dato: "03.05",
     emoji: "🥩",
     meal: "Nakkefilet (ovn)",
     color: "#f5e6d3",
@@ -42,7 +42,7 @@ const madplan = [
   },
   {
     day: "Mandag",
-    dato: "5. maj",
+    dato: "04.05",
     emoji: "🍗",
     meal: "Kylling i Jensens sovs 🍗",
     color: "#fdf2e9",
@@ -79,7 +79,7 @@ const madplan = [
   },
   {
     day: "Tirsdag",
-    dato: "6. maj",
+    dato: "05.05",
     emoji: "🍞",
     meal: "Rugbrødsdag 🍞",
     color: "#f3f3f3",
@@ -111,7 +111,7 @@ const madplan = [
   },
   {
     day: "Onsdag",
-    dato: "7. maj",
+    dato: "06.05",
     emoji: "🍗",
     meal: "Kyllingebrystfilet (flødesovs)",
     color: "#fdf2e9",
@@ -147,7 +147,7 @@ const madplan = [
   },
   {
     day: "Torsdag",
-    dato: "8. maj",
+    dato: "07.05",
     emoji: "🐷",
     meal: "Mørbrad af gris",
     color: "#f5e6d3",
@@ -180,7 +180,7 @@ const madplan = [
   },
   {
     day: "Fredag",
-    dato: "9. maj",
+    dato: "08.05",
     emoji: "🍖",
     meal: "Spareribs",
     color: "#f5e6d3",
@@ -213,7 +213,7 @@ const madplan = [
   },
   {
     day: "Lørdag",
-    dato: "10. maj",
+    dato: "09.05",
     emoji: "🍝",
     meal: "Pasta m. tomatflødesovs 🍝",
     color: "#fff3e0",
@@ -249,7 +249,7 @@ const madplan = [
   },
   {
     day: "Søndag",
-    dato: "11. maj",
+    dato: "10.05",
     emoji: "🥩",
     meal: "Kalveculotte (bøf)",
     color: "#e8f4f8",
@@ -357,7 +357,7 @@ export default function App() {
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
           <div>
             <div style={{ fontSize: 10, letterSpacing: 3, textTransform: "uppercase", opacity: 0.5 }}>Uge 19 · 2026</div>
-            <div style={{ fontSize: 18, fontWeight: "bold" }}>Bruslund Madplan — 4. maj–10. maj</div>
+            <div style={{ fontSize: 18, fontWeight: "bold" }}>Bruslund Madplan — 3. maj–10. maj</div>
           </div>
           <div style={{ textAlign: "right" }}>
             <div style={{ fontSize: 10, opacity: 0.5, marginBottom: 3 }}>Indkobsfremgang</div>
