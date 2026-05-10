@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 // Madplan uge 20 · 2026 · 11. maj – 17. maj
-// Opdateret af MasterKOK 👨‍🍳 søndag 10. maj 2026
-// Baseret på familiens præferencer (fryseren tom efter uge 19)
+// Opdateret af Odin 🪬 søndag 10. maj 2026
+// Baseret på Bilka tilbud uge 20 + familiens ønsker
 
 const madplan = [
   {
@@ -43,102 +43,101 @@ const madplan = [
   {
     day: "Tirsdag",
     dato: "12.05",
-    emoji: "🍗",
-    meal: "Rester fra mandag (kylling)",
-    color: "#fdf2e9",
-    accent: "#d17a2f",
+    emoji: "🍝",
+    meal: "Lasagne (Mayas ønske!)",
+    color: "#fff3e0",
+    accent: "#e65100",
     naering: {
-      hel: { kcal: 2600, protein: 220, kulhy: 200, fedt: 85 },
-      portion: { kcal: 650, protein: 55, kulhy: 50, fedt: 21 },
+      hel: { kcal: 3200, protein: 270, kulhy: 310, fedt: 115 },
+      portion: { kcal: 800, protein: 68, kulhy: 78, fedt: 29 },
     },
     recipe: {
-      tid: "20 min",
-      svaerhed: "Let",
-      intro: "Rester fra mandag! Kyllingen opvarmes og serveres igen. Nem og sødt resteret dag. 🍗",
+      tid: "90 min",
+      svaerhed: "Middel",
+      intro: "Mayas favorit! 🍝 Klassisk lasagne med kødsovs, bechamel og masser af ost. Tager tid men er det hele værd!",
       trin: [
-        "Tag restene af kyllingen fra mandag.",
-        "Varm dem op i ovnen ved 150°C i ca. 15 min.",
-        "Evt. tilsæt lidt bouillon eller vand hvis tørt.",
-        "Server med samme tilbehør som i dag eller noget nyt.",
-        "Nemt og sparer tid i køkkenet!",
+        "Forvarm ovnen til 200°C.",
+        "Brun hakket oksekød med løg og hvidløg i pande.",
+        "Tilsæt dåsetomater, tomatpuré og fond. Lad simre 20 min.",
+        "Lav bechamelsovs: smelt smør, rør mel i, tilsæt mælk lidt ad gangen til glat sovs.",
+        "Krydr bechamel med salt, peber og muskatnød.",
+        "Byg lasagnen i ildfast fad: pasta, kødsovs, bechamel — gentag lag.",
+        "Afslut med bechamel og revet ost på toppen.",
+        "Bag i 35-40 min til gylden og boblende. Lad hvile 10 min før servering. 🍝",
       ],
     },
     ingredients: [
-      { name: "Kylling (rester fra mandag)", qty: "ca. 500g", url: "https://www.bilkatogo.dk/s?query=kyllingefilet" },
-      { name: "Ris eller kartofler", qty: "efter ønske", url: "https://www.bilkatogo.dk/s?query=ris" },
-      { name: "Evt. bouillon", qty: "1 dl", url: "https://www.bilkatogo.dk/s?query=fond" },
+      { name: "Hakket oksekød (tilbud)", qty: "600g", url: "https://www.bilkatogo.dk/s?query=hakket+koed" },
+      { name: "Lasagneplader", qty: "250g", url: "https://www.bilkatogo.dk/s?query=lasagne" },
+      { name: "Dåsetomater", qty: "2 dåser", url: "https://www.bilkatogo.dk/s?query=daasetomater" },
+      { name: "Tomatpuré", qty: "2 spsk", url: "https://www.bilkatogo.dk/s?query=tomatpure" },
+      { name: "Løg", qty: "2 stk", url: "https://www.bilkatogo.dk/s?query=loeg" },
+      { name: "Hvidløg", qty: "3 fed", url: "https://www.bilkatogo.dk/s?query=hvidloeg" },
+      { name: "Smør", qty: "75g", url: "https://www.bilkatogo.dk/s?query=smor" },
+      { name: "Mel", qty: "4 spsk", url: "https://www.bilkatogo.dk/s?query=mel" },
+      { name: "Mælk", qty: "6 dl", url: "https://www.bilkatogo.dk/s?query=maelk" },
+      { name: "Revet ost", qty: "200g", url: "https://www.bilkatogo.dk/s?query=revet+ost" },
+      { name: "Kødfond", qty: "2 dl", url: "https://www.bilkatogo.dk/s?query=fond" },
     ],
   },
   {
     day: "Onsdag",
     dato: "13.05",
     emoji: "🍝",
-    meal: "Spaghetti med kødsovs (bolognese)",
+    meal: "Rester fra tirsdag (lasagne)",
     color: "#fff3e0",
     accent: "#e65100",
     naering: {
-      hel: { kcal: 2900, protein: 260, kulhy: 300, fedt: 95 },
-      portion: { kcal: 725, protein: 65, kulhy: 75, fedt: 24 },
+      hel: { kcal: 3000, protein: 250, kulhy: 290, fedt: 105 },
+      portion: { kcal: 750, protein: 63, kulhy: 73, fedt: 26 },
     },
     recipe: {
-      tid: "45 min",
+      tid: "15 min",
       svaerhed: "Let",
-      intro: "Klassiker — hurtig hverdagsret! Spaghetti med kødsovs er altid en succes. 🍝",
+      intro: "Rester fra tirsdag! Lasagne smager faktisk endnu bedre dagen efter. Bare varm op og nyd! 🍝",
       trin: [
-        "Kog spaghetti efter pakkehenvisning.",
-        "Brun hakket oksekød i pande med olivenolie.",
-        "Tilsæt finthakket løg og hvidløg, svits kort.",
-        "Tilsæt dåsetomater, tomatpuré og fond.",
-        "Lad det simre 20-25 min på lav varme.",
-        "Krydr med salt, peber og evt. oregano.",
-        "Bland pasta og sovs sammen. Server straks! 🍝",
+        "Forvarm ovnen til 180°C.",
+        "Læg lasagnerester i ildfast fad, dæk evt. med folie.",
+        "Varm op i 20 min til gennemvarm og boblende.",
+        "Kan også varmes i mikrobølgeovn i 4-5 min.",
+        "Server med frisk salat hvis ønskes. Nemt og lækkert! 🍝",
       ],
     },
     ingredients: [
-      { name: "Spaghetti", qty: "500g", url: "https://www.bilkatogo.dk/s?query=spaghetti" },
-      { name: "Hakket oksekød", qty: "600g", url: "https://www.bilkatogo.dk/s?query=hakket+koed" },
-      { name: "Dåsetomater", qty: "2 dåser", url: "https://www.bilkatogo.dk/s?query=daaosetomater" },
-      { name: "Løg", qty: "2 stk", url: "https://www.bilkatogo.dk/s?query=loeg" },
-      { name: "Hvidløg", qty: "3 fed", url: "https://www.bilkatogo.dk/s?query=hvidloeg" },
-      { name: "Tomatpuré", qty: "2 spsk", url: "https://www.bilkatogo.dk/s?query=tomatpure" },
-      { name: "Kødfond", qty: "2 dl", url: "https://www.bilkatogo.dk/s?query=fond" },
-      { name: "Olivenolie", qty: "3 spsk", url: "https://www.bilkatogo.dk/s?query=olivenolie" },
+      { name: "Lasagne (rester fra tirsdag)", qty: "hele fadet", url: "https://www.bilkatogo.dk/s?query=lasagne" },
+      { name: "Evt. frisk salat", qty: "1 pose", url: "https://www.bilkatogo.dk/s?query=salat" },
     ],
   },
   {
     day: "Torsdag",
     dato: "14.05",
-    emoji: "🍝",
-    meal: "Rester fra onsdag (bolognese)",
-    color: "#fff3e0",
-    accent: "#e65100",
+    emoji: "🚗",
+    meal: "Ingen aftensmad — besøg hos svigermor",
+    color: "#f3f3f3",
+    accent: "#888888",
     naering: {
-      hel: { kcal: 2700, protein: 240, kulhy: 280, fedt: 85 },
-      portion: { kcal: 675, protein: 60, kulhy: 70, fedt: 21 },
+      hel: { kcal: 0, protein: 0, kulhy: 0, fedt: 0 },
+      portion: { kcal: 0, protein: 0, kulhy: 0, fedt: 0 },
     },
     recipe: {
-      tid: "15 min",
+      tid: "—",
       svaerhed: "Let",
-      intro: "Rester fra onsdag! Bolognese opvarmes og serveres på frisk pasta. Nem dag! 🍝",
+      intro: "Familien er i Nykøbing Mors og besøger svigermor! 🚗 Kristi Himmelfartsdag — ingen aftensmad hjemme. God tur! 🙌",
       trin: [
-        "Kog frisk pasta efter pakkehenvisning.",
-        "Varm bolognesen fra onsdag op i pande.",
-        "Evt. tilsæt lidt vand eller fond hvis tørt.",
-        "Bland pasta og sovs sammen.",
-        "Server straks med evt. Parmesan. Lækkert! 🍝",
+        "Kør sikkert til Nykøbing Mors!",
+        "Husk: Bilka er LUKKET denne dag.",
+        "Nyd turen og besøget hos svigermor. 🧓",
       ],
     },
     ingredients: [
-      { name: "Spaghetti eller pasta", qty: "500g", url: "https://www.bilkatogo.dk/s?query=pasta" },
-      { name: "Bolognese (rester fra onsdag)", qty: "ca. 1 liter", url: "https://www.bilkatogo.dk/s?query=hakket+koed" },
-      { name: "Evt. Parmesan", qty: "evt.", url: "https://www.bilkatogo.dk/s?query=parmesan" },
+      { name: "God rejse!", qty: "—", url: "https://www.bilka.dk" },
     ],
   },
   {
     day: "Fredag",
     dato: "15.05",
     emoji: "🐟",
-    meal: "Fiskefilet med persillesovs og citron",
+    meal: "Fiskefileter med persillesovs og citron",
     color: "#e1f5fe",
     accent: "#0277bd",
     naering: {
@@ -172,7 +171,7 @@ const madplan = [
     day: "Lørdag",
     dato: "16.05",
     emoji: "🍔",
-    meal: "Hjemmelavede burgere med bacon og salat",
+    meal: "Hjemmelavede burgere med bacon",
     color: "#f5deb3",
     accent: "#8b4513",
     naering: {
@@ -219,7 +218,7 @@ const madplan = [
     recipe: {
       tid: "120 min",
       svaerhed: "Middel",
-      intro: "⚽ Vejle BK-dag! Klassisk dansk flæskesteg med rødkål. Enkel og festlig — Lars muligvis til stadion!",
+      intro: "⚽ Vejle BK-dag! Klassisk dansk flæskesteg med rødkål. Flæskesteg på tilbud max 61,15 kr/kg — sæt den over om morgenen!",
       trin: [
         "Forvarm ovnen til 180°C.",
         "Tag flæskesteg ud og lad den varme til stuetemperatur.",
@@ -319,7 +318,7 @@ export default function App() {
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
           <div>
             <div style={{ fontSize: 10, letterSpacing: 3, textTransform: "uppercase", opacity: 0.5 }}>Uge 20 · 2026</div>
-            <div style={{ fontSize: 18, fontWeight: "bold" }}>Bruslund Madplan — 11. maj–17. maj</div>
+            <div style={{ fontSize: 18, fontWeight: "bold" }}>Bruslund Madplan — 11.–17. maj 2026</div>
           </div>
           <div style={{ textAlign: "right" }}>
             <div style={{ fontSize: 10, opacity: 0.5, marginBottom: 3 }}>Indkobsfremgang</div>
