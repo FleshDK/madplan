@@ -1,86 +1,232 @@
 import { useState } from "react";
 
-// Madplan uge 23 · 2026 · 01. juni – 07. juni
-// Opdateret af MasterKOK 👨‍🍳 søndag 31. maj 2026
-// Oksemørbrad og fiskefillet fra fryseren prioriteret. Fredag = Fars dag 🎂. Lørdag hurtig aftensmad (Simon murer, klassefest)
+// Madplan uge 24 · 2026 · 08. juni – 14. juni
+// Opdateret af MasterKOK 👨‍🍳 søndag 07. juni 2026
+// Fryseren tom — Bilka-tilbud ikke tilgængelige. Mandag hurtig ret (Alberte piercing kl. 16:20). Klassisk dansk madplan resten af ugen.
 
 const madplan = [
   {
     day: "Mandag",
-    dato: "01.06",
-    emoji: "🥩",
-    meal: "Mørbrad med flødesovs",
-    sidedish: "Bådekartofler",
-    note: "Fra fryseren — ca. 30 min",
-    color: "#fff5ee",
-    accent: "#bf360c",
+    dato: "08.06",
+    emoji: "🍝",
+    meal: "Pasta Carbonara",
+    sidedish: "Brød",
+    note: "⏰ HURTIG RET — Alberte piercing kl. 16:20. Pasta er 15 min. Serveres kl. 18:00.",
+    color: "#fffde7",
+    accent: "#f57f17",
     naering: {
-      hel: { kcal: 2800, protein: 280, kulhy: 210, fedt: 110 },
-      portion: { kcal: 700, protein: 70, kulhy: 53, fedt: 28 },
+      hel: { kcal: 2800, protein: 120, kulhy: 340, fedt: 120 },
+      portion: { kcal: 700, protein: 30, kulhy: 85, fedt: 30 },
     },
     recipe: {
-      tid: "30 min",
+      tid: "15 min",
       svaerhed: "Let",
-      intro: "Klassisk dansk mørbrad med rig flødesovs. Mørbrad fra fryseren gør det hurtigt og elegant!",
+      intro: "Hurtig og lækker Pasta Carbonara! 🍝 Cremede æg, sprød bacon og pasta — klassisk italiensk på 15 minutter. Perfekt til en travl mandag.",
       trin: [
-        "Kog bådekartofler i saltet vand ca. 20 min.",
-        "Tag mørbrad fra fryseren og lad det tø let.",
-        "Steg mørbrad på panden 3-4 min per side.",
-        "Tag kødet af og hvil det.",
-        "Lav flødesovs: skrenk kogepanden, tilsæt fløde og fond.",
-        "Tilsæt hakket persille og smag til med salt og peber.",
-        "Server mørbrad med bådekartofler og rigelig sovs. 🍽️",
+        "Kog pasta i rigeligt saltet vand efter anvisning.",
+        "Steg bacon i en tør pande til sprød og gylden.",
+        "Pisk æg og et lille skvæt fløde sammen i en skål.",
+        "Riv parmesanost og tilsæt til æggeblandingen.",
+        "Hæld kogt pasta direkte over til bacon på panden (panden slukket).",
+        "Tilsæt æggemassen og rør hurtigt — varmen fra pastaen koger ægget forsigtigt.",
+        "Smag til med salt og masser af sort peber. Server straks med godt brød! 🍞",
       ],
     },
     ingredients: [
-      { name: "Oksemørbrad (FRYSER)", qty: "700g", url: "https://www.bilkatogo.dk/s?query=moerbrad" },
-      { name: "Bådekartofler", qty: "1,2 kg", url: "https://www.bilkatogo.dk/s?query=kartofler" },
-      { name: "Fløde", qty: "2 dl", url: "https://www.bilkatogo.dk/s?query=flode" },
-      { name: "Persille", qty: "1 bundt", url: "https://www.bilkatogo.dk/s?query=persille" },
-      { name: "Kødfond", qty: "1 dl", url: "https://www.bilkatogo.dk/s?query=fond" },
+      { name: "Pasta (spaghetti eller rigatoni)", qty: "400g", url: "https://www.bilkatogo.dk/s?query=pasta" },
+      { name: "Bacon", qty: "200g", url: "https://www.bilkatogo.dk/s?query=bacon" },
+      { name: "Æg", qty: "4 stk", url: "https://www.bilkatogo.dk/s?query=aeg" },
+      { name: "Parmesanost", qty: "50g", url: "https://www.bilkatogo.dk/s?query=parmesan" },
+      { name: "Fløde", qty: "1 dl", url: "https://www.bilkatogo.dk/s?query=flode" },
+      { name: "Brød", qty: "1 flute", url: "https://www.bilkatogo.dk/s?query=broed" },
     ],
   },
   {
     day: "Tirsdag",
-    dato: "02.06",
-    emoji: "🥩",
-    meal: "Mørbrad-rester",
-    sidedish: "Bådekartofler",
-    note: "Dag efter-regel ✓",
-    color: "#fff5ee",
-    accent: "#bf360c",
+    dato: "09.06",
+    emoji: "🍝",
+    meal: "Pasta Carbonara (rester fra mandag)",
+    sidedish: "Grøn salat",
+    note: "Rester fra mandag — dag efter-regel ✓",
+    color: "#fffde7",
+    accent: "#f57f17",
     naering: {
-      hel: { kcal: 2700, protein: 260, kulhy: 200, fedt: 105 },
-      portion: { kcal: 675, protein: 65, kulhy: 50, fedt: 26 },
+      hel: { kcal: 2600, protein: 110, kulhy: 310, fedt: 110 },
+      portion: { kcal: 650, protein: 28, kulhy: 78, fedt: 28 },
     },
     recipe: {
-      tid: "25 min",
+      tid: "10 min",
       svaerhed: "Let",
-      intro: "Smart genbrug fra mandagen! 💚 Mørbrad-rester bliver til en lækker ret igen — bare steg og varmet op.",
+      intro: "Smart genbrug! 💚 Rester fra mandag varmes forsigtigt op. Frisk grøn salat giver et lækkert modspil.",
       trin: [
-        "Kog bådekartofler i saltet vand ca. 20 min.",
-        "Skær mørbrad-resterne i mundrrette stykker.",
-        "Varm flødeovsen op i en pande.",
-        "Steg mørbrad-stykkerne kort på panden, ca. 2 min.",
-        "Tilsæt kødet til den varme sovs og lad det blande godt.",
-        "Smag til med salt og peber.",
-        "Server med bådekartofler og sovs. 🍽️",
+        "Varm pasta-resterne langsomt op på panden ved lav varme.",
+        "Tilsæt en smule fløde for at gøre sovsen blød igen.",
+        "Rør forsigtigt til pastaen er varm.",
+        "Skyl salaten og skær grøntsager i stykker.",
+        "Lav en simpel dressing af olie, eddike, salt og peber.",
+        "Server carbonara med frisk grøn salat ved siden af. 🥗",
       ],
     },
     ingredients: [
-      { name: "Mørbrad-rester fra mandag", qty: "600g", url: "https://www.bilkatogo.dk/s?query=moerbrad" },
-      { name: "Flødeovs fra mandag", qty: "3 dl", url: "https://www.bilkatogo.dk/s?query=flode" },
-      { name: "Bådekartofler", qty: "1,2 kg", url: "https://www.bilkatogo.dk/s?query=kartofler" },
-      { name: "Salt og peber", qty: "efter smag", url: "https://www.bilkatogo.dk/s?query=krydderier" },
+      { name: "Rester fra mandag (Carbonara)", qty: "alle rester", url: "https://www.bilkatogo.dk/s?query=pasta" },
+      { name: "Fløde (lidt ekstra)", qty: "0,5 dl", url: "https://www.bilkatogo.dk/s?query=flode" },
+      { name: "Grøn salat (blandet)", qty: "1 pose", url: "https://www.bilkatogo.dk/s?query=salat" },
+      { name: "Olivenolie", qty: "2 spsk", url: "https://www.bilkatogo.dk/s?query=olivenolie" },
+      { name: "Eddike", qty: "1 spsk", url: "https://www.bilkatogo.dk/s?query=eddike" },
     ],
   },
   {
     day: "Onsdag",
-    dato: "03.06",
+    dato: "10.06",
+    emoji: "🥩",
+    meal: "Millionbøf",
+    sidedish: "Kartoflemos",
+    note: "Klassisk dansk — hakket oksekød med stuvede løg og sovs",
+    color: "#fff5ee",
+    accent: "#bf360c",
+    naering: {
+      hel: { kcal: 3000, protein: 240, kulhy: 280, fedt: 120 },
+      portion: { kcal: 750, protein: 60, kulhy: 70, fedt: 30 },
+    },
+    recipe: {
+      tid: "45 min",
+      svaerhed: "Let",
+      intro: "Klassisk dansk hverdagsmad! 🥩 Millionbøf med hakket oksekød, bløde løg og rig sovs — server med dejlig kartoflemos.",
+      trin: [
+        "Svits hakket oksekød godt brunet på panden.",
+        "Tilsæt fintsnittet løg og svits med til blødt og gyldent.",
+        "Tilsæt bouillon og lad det simre 15-20 min.",
+        "Tilsæt fløde og smag til med salt og peber.",
+        "Kog kartofler møre i saltet vand (ca. 20 min).",
+        "Mos kartofler med smør og fløde til cremet kartoflemos.",
+        "Server millionbøf over kartoffelmos med masser af sovs. 🍽️",
+      ],
+    },
+    ingredients: [
+      { name: "Hakket oksekød", qty: "600g", url: "https://www.bilkatogo.dk/s?query=hakket+oksekoed" },
+      { name: "Løg", qty: "3 stk", url: "https://www.bilkatogo.dk/s?query=loeg" },
+      { name: "Bouillon", qty: "4 dl", url: "https://www.bilkatogo.dk/s?query=bouillon" },
+      { name: "Fløde", qty: "2 dl", url: "https://www.bilkatogo.dk/s?query=flode" },
+      { name: "Kartofler (til mos)", qty: "1,2 kg", url: "https://www.bilkatogo.dk/s?query=kartofler" },
+      { name: "Smør", qty: "75g", url: "https://www.bilkatogo.dk/s?query=smor" },
+    ],
+  },
+  {
+    day: "Torsdag",
+    dato: "11.06",
+    emoji: "🥩",
+    meal: "Millionbøf (rester fra onsdag)",
+    sidedish: "Kartoflemos",
+    note: "Restemad — opvarmet fra onsdag — dag efter-regel ✓",
+    color: "#fff5ee",
+    accent: "#bf360c",
+    naering: {
+      hel: { kcal: 2800, protein: 220, kulhy: 260, fedt: 110 },
+      portion: { kcal: 700, protein: 55, kulhy: 65, fedt: 28 },
+    },
+    recipe: {
+      tid: "20 min",
+      svaerhed: "Let",
+      intro: "Smart madspild! 💚 Millionbøf-rester fra onsdag smager endnu bedre næste dag — sovsen trækker og fordybes.",
+      trin: [
+        "Varm millionbøf-resterne op i en gryde ved middel varme.",
+        "Tilsæt lidt bouillon eller fløde hvis sovsen er for tyk.",
+        "Rør jævnligt og lad det simre 5-10 min.",
+        "Kog nye kartofler til kartoflemos (20 min).",
+        "Mos kartofler med smør og lidt fløde.",
+        "Server de varme rester over den friske mos. 🍽️",
+      ],
+    },
+    ingredients: [
+      { name: "Rester fra onsdag (Millionbøf)", qty: "alle rester", url: "https://www.bilkatogo.dk/s?query=hakket+oksekoed" },
+      { name: "Kartofler (til mos)", qty: "1,2 kg", url: "https://www.bilkatogo.dk/s?query=kartofler" },
+      { name: "Smør", qty: "50g", url: "https://www.bilkatogo.dk/s?query=smor" },
+      { name: "Fløde (lidt ekstra)", qty: "1 dl", url: "https://www.bilkatogo.dk/s?query=flode" },
+    ],
+  },
+  {
+    day: "Fredag",
+    dato: "12.06",
+    emoji: "🐟",
+    meal: "Fiskefilet med Persillesovs",
+    sidedish: "Kogte kartofler",
+    note: "Fredag er fiskdag! Klassisk dansk fiskemad med persillesovs.",
+    color: "#e0f7fa",
+    accent: "#00695c",
+    naering: {
+      hel: { kcal: 2200, protein: 200, kulhy: 240, fedt: 60 },
+      portion: { kcal: 550, protein: 50, kulhy: 60, fedt: 15 },
+    },
+    recipe: {
+      tid: "35 min",
+      svaerhed: "Let",
+      intro: "Klassisk dansk fredag! 🐟 Sprød fiskefilet med hjemmelavet persillesovs og kogte kartofler. Enkelt, sundt og dejligt.",
+      trin: [
+        "Kog kartofler i saltet vand ca. 20 min til møre.",
+        "Optø fiskefilet hvis frossen — dup tør med køkkenrulle.",
+        "Vend filet i mel, salt og peber.",
+        "Steg fiskefilet i smør på panden, 3-4 min per side til gylden.",
+        "Lav persillesovs: smelt smør, tilsæt mel og rør til en opbagning.",
+        "Tilsæt mælk lidt ad gangen under piskning — kog til cremet sovs.",
+        "Tilsæt masser af hakket frisk persille, salt og peber.",
+        "Server fisken med kogte kartofler og rig persillesovs. 🍽️",
+      ],
+    },
+    ingredients: [
+      { name: "Fiskefilet (torsk eller lignende)", qty: "700g", url: "https://www.bilkatogo.dk/s?query=fiskefilet" },
+      { name: "Kartofler", qty: "1,2 kg", url: "https://www.bilkatogo.dk/s?query=kartofler" },
+      { name: "Frisk persille", qty: "1 bundt", url: "https://www.bilkatogo.dk/s?query=persille" },
+      { name: "Smør", qty: "100g", url: "https://www.bilkatogo.dk/s?query=smor" },
+      { name: "Mel", qty: "3 spsk", url: "https://www.bilkatogo.dk/s?query=mel" },
+      { name: "Mælk", qty: "4 dl", url: "https://www.bilkatogo.dk/s?query=maelk" },
+      { name: "Salt og peber", qty: "efter smag", url: "https://www.bilkatogo.dk/s?query=krydderier" },
+    ],
+  },
+  {
+    day: "Lørdag",
+    dato: "13.06",
+    emoji: "🍔",
+    meal: "Hjemmelavede Burgere",
+    sidedish: "Pomfritter",
+    note: "Weekend hygge — burgere med salat, tomat, løg og ost (tilladt på burger!)",
+    color: "#fff3e0",
+    accent: "#e65100",
+    naering: {
+      hel: { kcal: 3200, protein: 200, kulhy: 320, fedt: 140 },
+      portion: { kcal: 800, protein: 50, kulhy: 80, fedt: 35 },
+    },
+    recipe: {
+      tid: "40 min",
+      svaerhed: "Let",
+      intro: "Lørdagshygge! 🍔 Hjemmelavede burgere med sprøde pomfritter — form bollerne selv og steg dem perfekte. Ost er tilladt på burger!",
+      trin: [
+        "Forvarm ovnen til 220°C til pomfritter.",
+        "Skær kartofler i stave og krydr med olie, salt og peber.",
+        "Bag pomfritter i ovnen 30-35 min, vend halvejs.",
+        "Form hakket oksekød til 4 flade burgerboller — krydr med salt og peber.",
+        "Steg burgererne på varm pande, 3-4 min per side.",
+        "Læg ost på de sidste 2 min så det smelter.",
+        "Anret burgere i buns med salat, tomat, løg og din yndlingsdressing.",
+        "Server med de sprøde pomfritter. Velbekomme! 🍟",
+      ],
+    },
+    ingredients: [
+      { name: "Hakket oksekød (til burgere)", qty: "600g", url: "https://www.bilkatogo.dk/s?query=hakket+oksekoed" },
+      { name: "Burgerbuns", qty: "4 stk", url: "https://www.bilkatogo.dk/s?query=burgerbun" },
+      { name: "Kartofler til pomfritter", qty: "1 kg", url: "https://www.bilkatogo.dk/s?query=kartofler" },
+      { name: "Salat", qty: "1/2 hoved", url: "https://www.bilkatogo.dk/s?query=salat" },
+      { name: "Tomat", qty: "2 stk", url: "https://www.bilkatogo.dk/s?query=tomat" },
+      { name: "Løg", qty: "1 stk", url: "https://www.bilkatogo.dk/s?query=loeg" },
+      { name: "Ost (burger-skiver)", qty: "4 skiver", url: "https://www.bilkatogo.dk/s?query=burgerkase" },
+    ],
+  },
+  {
+    day: "Søndag",
+    dato: "14.06",
     emoji: "🍗",
-    meal: "Kyllingefilet i ovn med grøntsager",
+    meal: "Kyllingefilet i Ovn",
     sidedish: "Ris",
-    note: "Billigt og familievenligt",
+    note: "Søndagsmad — kylling med krydderier, bagte grøntsager og ris",
     color: "#f3e5f5",
     accent: "#7b1fa2",
     naering: {
@@ -90,173 +236,26 @@ const madplan = [
     recipe: {
       tid: "50 min",
       svaerhed: "Let",
-      intro: "Nem og lækker ovnret! 🍗 Saftige kyllingefileter med grøntsager og hvidløg. Server med ris til.",
+      intro: "Klassisk søndagsmad! 🍗 Saftige kyllingefileter i ovnen med krydrede grøntsager og fluffy ris. Hele familien er glad!",
       trin: [
         "Forvarm ovnen til 200°C.",
         "Skær kyllingefileterne i mundrette stykker.",
-        "Hak hvidløg fint og skær grøntsager i stykker.",
+        "Hak hvidløg fint og skær paprika og grøntsager i stykker.",
         "Bland kylling og grøntsager i ildfast fad.",
-        "Drys med olivenolie, hvidløg, salt, peber og krydderurter.",
+        "Drys med olivenolie, hvidløg, paprika, salt, peber og krydderurter.",
         "Bag i 35-40 min til kyllingen er gylden og gennemstegt.",
-        "Kog risen og server sammen med det bagte. Drys evt. med frisk persille. 🌿",
+        "Kog risen efter anvisning (ca. 18 min).",
+        "Server kylling og grøntsager over risen med masser af saft fra fadet. 🌿",
       ],
     },
     ingredients: [
       { name: "Kyllingefilet", qty: "700g", url: "https://www.bilkatogo.dk/s?query=kyllingefilet" },
       { name: "Ris", qty: "400g", url: "https://www.bilkatogo.dk/s?query=ris" },
-      { name: "Hvidløg", qty: "6 fed", url: "https://www.bilkatogo.dk/s?query=hvidloeg" },
-      { name: "Løg", qty: "2 stk", url: "https://www.bilkatogo.dk/s?query=loeg" },
-      { name: "Tomat", qty: "2 stk", url: "https://www.bilkatogo.dk/s?query=tomat" },
-      { name: "Paprika", qty: "1 stk", url: "https://www.bilkatogo.dk/s?query=paprika" },
+      { name: "Paprika", qty: "2 stk", url: "https://www.bilkatogo.dk/s?query=paprika" },
+      { name: "Hvidløg", qty: "4 fed", url: "https://www.bilkatogo.dk/s?query=hvidloeg" },
+      { name: "Grøntsager (blanding)", qty: "300g", url: "https://www.bilkatogo.dk/s?query=grontsager" },
       { name: "Olivenolie", qty: "3 spsk", url: "https://www.bilkatogo.dk/s?query=olivenolie" },
-    ],
-  },
-  {
-    day: "Torsdag",
-    dato: "04.06",
-    emoji: "🐠",
-    meal: "Rødspættefilet med citronsmør",
-    sidedish: "Pomfritter",
-    note: "Klassisk fiskeret",
-    color: "#e0f7fa",
-    accent: "#00695c",
-    naering: {
-      hel: { kcal: 2500, protein: 240, kulhy: 260, fedt: 95 },
-      portion: { kcal: 625, protein: 60, kulhy: 65, fedt: 24 },
-    },
-    recipe: {
-      tid: "35 min",
-      svaerhed: "Let",
-      intro: "Klassisk dansk fisk! 🐠 Rødspættefilet med duftende citronsmør og sprøde pomfritter. Let og lækkert!",
-      trin: [
-        "Tøer fiskefilleten fra fryseren hvis nødvendigt.",
-        "Sætter pomfritter i ovnen eller frituren efter anvisning.",
-        "Vender fiskefilleten i mel, salt og peber.",
-        "Steger filleten i smør på panden, 2-3 min per side til gylden.",
-        "Presser citron over filleten under stegning.",
-        "Anretter fisken med pomfritter.",
-        "Serverer med citronsnegle og evt. dild. 🍋",
-      ],
-    },
-    ingredients: [
-      { name: "Rødspættefilet", qty: "700g", url: "https://www.bilkatogo.dk/s?query=roedsphaette" },
-      { name: "Pomfritter (frosne eller rå kartofler)", qty: "800g", url: "https://www.bilkatogo.dk/s?query=kartofler" },
-      { name: "Citron", qty: "2 stk", url: "https://www.bilkatogo.dk/s?query=citron" },
-      { name: "Smør", qty: "75g", url: "https://www.bilkatogo.dk/s?query=smor" },
-      { name: "Mel", qty: "3 spsk", url: "https://www.bilkatogo.dk/s?query=mel" },
-      { name: "Dild (evt.)", qty: "1 bundt", url: "https://www.bilkatogo.dk/s?query=dild" },
-    ],
-  },
-  {
-    day: "Fredag",
-    dato: "05.06",
-    emoji: "🎂",
-    meal: "Ribeye steak",
-    sidedish: "Bådekartofler",
-    note: "GRUNDLOVSDAG + FARS DAG 🎂 — festligt valg!",
-    color: "#fff5ee",
-    accent: "#d32f2f",
-    naering: {
-      hel: { kcal: 3200, protein: 300, kulhy: 210, fedt: 140 },
-      portion: { kcal: 800, protein: 75, kulhy: 53, fedt: 35 },
-    },
-    recipe: {
-      tid: "40 min",
-      svaerhed: "Let",
-      intro: "Festlig fredag! 🎂 Græssted ribeye steak til Lars' fødselsdag og Grundlovsdag. Elegant og lækker!",
-      trin: [
-        "Kog bådekartofler i saltet vand ca. 20 min.",
-        "Tag ribeye steak ud af køleskab 15-20 min før stegning.",
-        "Krydr godt med salt og peber på begge sider.",
-        "Varm panden op til meget høj temperatur (næsten røgende).",
-        "Steg steaken 4-5 min per side til kødet er gennemvarmt (58°C indeni for medium).",
-        "Lad steaken hvile i 5 min efter stegning — vigtig trin!",
-        "Server med bådekartofler, smørklak og evt. tilbehør. Skål! 🥂",
-      ],
-    },
-    ingredients: [
-      { name: "Ribeye steak", qty: "800g", url: "https://www.bilkatogo.dk/s?query=ribeye" },
-      { name: "Bådekartofler", qty: "1,2 kg", url: "https://www.bilkatogo.dk/s?query=kartofler" },
-      { name: "Smør", qty: "100g", url: "https://www.bilkatogo.dk/s?query=smor" },
-      { name: "Hvidløg", qty: "3 fed", url: "https://www.bilkatogo.dk/s?query=hvidloeg" },
-      { name: "Salt og peber", qty: "efter smag", url: "https://www.bilkatogo.dk/s?query=krydderier" },
-    ],
-  },
-  {
-    day: "Lørdag",
-    dato: "06.06",
-    emoji: "🌭",
-    meal: "Grillpølser",
-    sidedish: "Brød og salat",
-    note: "Simon murer + klassefest aften — hurtig & praktisk",
-    color: "#fff3e0",
-    accent: "#e65100",
-    naering: {
-      hel: { kcal: 2300, protein: 110, kulhy: 320, fedt: 80 },
-      portion: { kcal: 575, protein: 28, kulhy: 80, fedt: 20 },
-    },
-    recipe: {
-      tid: "20 min",
-      svaerhed: "Let",
-      intro: "Hurtig lørdagsmad! 🌭 Grillpølser i brød med salat — simpel og familievenlig når der skal strammes op i hastarbejde.",
-      trin: [
-        "Tænder grillen eller panden op.",
-        "Lægger pølserne på grillen eller i panden.",
-        "Stegler 5-7 min, vender halvejs.",
-        "Toast evt. brødene på grillen 1-2 min.",
-        "Anretter pølser i brød med sennepe, ketchup og flødeskum.",
-        "Serverer med frisk salat ved siden af.",
-        "Nemt og lækkert! 🌭",
-      ],
-    },
-    ingredients: [
-      { name: "Grillpølser", qty: "8 stk", url: "https://www.bilkatogo.dk/s?query=grillpoelse" },
-      { name: "Fuldkornbrød", qty: "1 pose", url: "https://www.bilkatogo.dk/s?query=broed" },
-      { name: "Frisk salat", qty: "1 pose", url: "https://www.bilkatogo.dk/s?query=salat" },
-      { name: "Sennepe", qty: "1 glas", url: "https://www.bilkatogo.dk/s?query=sennepe" },
-      { name: "Ketchup", qty: "1 flaske", url: "https://www.bilkatogo.dk/s?query=ketchup" },
-      { name: "Flødeskum (evt.)", qty: "1 tube", url: "https://www.bilkatogo.dk/s?query=flodeskum" },
-    ],
-  },
-  {
-    day: "Søndag",
-    dato: "07.06",
-    emoji: "🥩",
-    meal: "Bøf med bløde løg og sovs",
-    sidedish: "Kogte kartofler og hjemmelavet agurkesalat",
-    note: "Klassisk dansk søndagsmad ♥️",
-    color: "#fff5ee",
-    accent: "#bf360c",
-    naering: {
-      hel: { kcal: 2900, protein: 280, kulhy: 200, fedt: 115 },
-      portion: { kcal: 725, protein: 70, kulhy: 50, fedt: 29 },
-    },
-    recipe: {
-      tid: "60 min",
-      svaerhed: "Mellem",
-      intro: "Klassisk dansk søndagsmad! ♥️ Møre oksebøffer med langsomme, karameliserede løg og rig sovs. En urkraft af gemytlighed.",
-      trin: [
-        "Kog kartofler i saltet vand ca. 20 min.",
-        "Skær løg i tynde ringe — meget løg!",
-        "Steger løgene langsomt i smør 20-25 min til de bliver sarte og karameliserede.",
-        "Tager halvdelen af løgene ud og sætter til side.",
-        "Lægger bøfferne i panden med den øvrige løg og rester af smør.",
-        "Stegler bøfferne 3-4 min per side — må ikke blive alt for gennemstegt!",
-        "Tager bøfferne ud og laver sovs i panden med fløde og fond.",
-        "Laver agurkesalat: skiver agurker, tilsæt eddike, sukker og salt — lad trække 10 min.",
-        "Serverer bøffer med kartofler, løg, sovs og agurkesalat. 🍽️",
-      ],
-    },
-    ingredients: [
-      { name: "Oksebøffer (tyksteg)", qty: "800g", url: "https://www.bilkatogo.dk/s?query=oksebef" },
-      { name: "Kartofler", qty: "1,2 kg", url: "https://www.bilkatogo.dk/s?query=kartofler" },
-      { name: "Løg", qty: "5 stk", url: "https://www.bilkatogo.dk/s?query=loeg" },
-      { name: "Gurke", qty: "1 stk", url: "https://www.bilkatogo.dk/s?query=gurke" },
-      { name: "Eddike", qty: "1 dl", url: "https://www.bilkatogo.dk/s?query=eddike" },
-      { name: "Sukker", qty: "2 spsk", url: "https://www.bilkatogo.dk/s?query=sukker" },
-      { name: "Fløde", qty: "1 dl", url: "https://www.bilkatogo.dk/s?query=flode" },
-      { name: "Kødfond", qty: "2 dl", url: "https://www.bilkatogo.dk/s?query=fond" },
-      { name: "Smør", qty: "100g", url: "https://www.bilkatogo.dk/s?query=smor" },
+      { name: "Krydderurter (timian/rosmarin)", qty: "efter smag", url: "https://www.bilkatogo.dk/s?query=krydderurter" },
     ],
   },
 ];
@@ -335,8 +334,8 @@ export default function App() {
       <div style={{ background: "#1a3a2a", color: "white", padding: "16px 20px 0", position: "sticky", top: 0, zIndex: 100, boxShadow: "0 2px 12px rgba(0,0,0,0.2)" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
           <div>
-            <div style={{ fontSize: 10, letterSpacing: 3, textTransform: "uppercase", opacity: 0.5 }}>Uge 23 · 2026</div>
-            <div style={{ fontSize: 18, fontWeight: "bold" }}>Bruslund Madplan — 01.–07. juni 2026</div>
+            <div style={{ fontSize: 10, letterSpacing: 3, textTransform: "uppercase", opacity: 0.5 }}>Uge 24 · 2026</div>
+            <div style={{ fontSize: 18, fontWeight: "bold" }}>Bruslund Madplan — 08.–14. juni 2026</div>
           </div>
           <div style={{ textAlign: "right" }}>
             <div style={{ fontSize: 10, opacity: 0.5, marginBottom: 3 }}>Indkobsfremgang</div>
@@ -402,6 +401,13 @@ export default function App() {
                 </div>
               </div>
               <div style={{ padding: "16px 20px" }}>
+                {d.note && (
+                  <div style={{ background: `${d.accent}18`, border: `1px solid ${d.accent}40`, borderRadius: 8, padding: "8px 12px", marginBottom: 14, fontSize: 13, color: d.accent, fontStyle: "italic" }}>
+                    {d.note}
+                  </div>
+                )}
+                <div style={{ fontSize: 11, letterSpacing: 2, textTransform: "uppercase", color: "#aaa", marginBottom: 6 }}>Tilbehør</div>
+                <div style={{ fontSize: 14, fontWeight: "bold", marginBottom: 14, color: "#444" }}>{d.sidedish}</div>
                 <div style={{ fontSize: 11, letterSpacing: 2, textTransform: "uppercase", color: "#aaa", marginBottom: 10 }}>Ingredienser</div>
                 {d.ingredients.map((ing, ii) => {
                   const key = `${activeDay}-${ii}`;
@@ -497,7 +503,7 @@ export default function App() {
         {view === "list" && (
           <div>
             <div style={{ background: "#1a3a2a", color: "white", borderRadius: 12, padding: "14px 18px", marginBottom: 20, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <span style={{ fontWeight: "bold", fontSize: 15 }}>Indkobsliste — uge 23</span>
+              <span style={{ fontWeight: "bold", fontSize: 15 }}>Indkøbsliste — uge 24</span>
               <span style={{ fontSize: 13, opacity: 0.7 }}>{checkedItems}/{totalItems} afkrydset</span>
             </div>
             {madplan.map((day, di) => (
@@ -527,7 +533,7 @@ export default function App() {
               </div>
             ))}
             <div style={{ textAlign: "center", marginTop: 20, paddingBottom: 20 }}>
-              <a href="https://www.bilkatogo.dk/" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: "#1a3a2a", color: "white", padding: "14px 28px", borderRadius: 12, textDecoration: "none", fontSize: 15, fontWeight: "bold", fontFamily: "inherit" }}>Ga til BilkaToGo</a>
+              <a href="https://www.bilkatogo.dk/" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", background: "#1a3a2a", color: "white", padding: "14px 28px", borderRadius: 12, textDecoration: "none", fontSize: 15, fontWeight: "bold", fontFamily: "inherit" }}>Gå til BilkaToGo</a>
             </div>
           </div>
         )}
