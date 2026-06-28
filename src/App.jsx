@@ -305,8 +305,8 @@ export default function App() {
       <div style={{ background: "#1a3a2a", color: "white", padding: "16px 20px 0", position: "sticky", top: 0, zIndex: 100, boxShadow: "0 2px 12px rgba(0,0,0,0.2)" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
           <div>
-            <div style={{ fontSize: 10, letterSpacing: 3, textTransform: "uppercase", opacity: 0.5 }}>Uge 24 · 2026</div>
-            <div style={{ fontSize: 18, fontWeight: "bold" }}>Bruslund Madplan — 08.–14. juni 2026</div>
+            <div style={{ fontSize: 10, letterSpacing: 3, textTransform: "uppercase", opacity: 0.5 }}>Uge 27 · 2026</div>
+            <div style={{ fontSize: 18, fontWeight: "bold" }}>Bruslund Madplan — 29.06–05.07.2026</div>
           </div>
           <div style={{ textAlign: "right" }}>
             <div style={{ fontSize: 10, opacity: 0.5, marginBottom: 3 }}>Indkobsfremgang</div>
@@ -474,7 +474,7 @@ export default function App() {
         {view === "list" && (
           <div>
             <div style={{ background: "#1a3a2a", color: "white", borderRadius: 12, padding: "14px 18px", marginBottom: 20, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <span style={{ fontWeight: "bold", fontSize: 15 }}>Indkøbsliste — uge 24</span>
+              <span style={{ fontWeight: "bold", fontSize: 15 }}>Indkøbsliste — uge 27</span>
               <span style={{ fontSize: 13, opacity: 0.7 }}>{checkedItems}/{totalItems} afkrydset</span>
             </div>
             {madplan.map((day, di) => (
