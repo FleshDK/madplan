@@ -2,7 +2,7 @@ import { useState } from "react";
 
 // Madplan uge 27 · 2026 · 29.06–05.07.2026
 // Opdateret af MasterKOK 👨‍🍳 søndag 28. juni 2026
-// ⚠. ️
+// U. g
 
 const madplan = [
   {
@@ -134,11 +134,11 @@ const madplan = [
   },
   {
     day: "Fredag",
-    dato: "03.07",
+    dato: "04.07",
     emoji: "🍽️",
-    meal: "Rødspætter eller havkatfilet",
-    sidedish: "Kogte kartofler + persillesovs",
-    note: "⚠️ FLEKSIBEL HVIS REJSE: Rema-tilbud 45 kr. Hvis familien er på vej til Østrig, kan være let og hurtig. Ellers klassisk fredag-fisk. ✓ Fisk-fredag",
+    meal: "Rødspættefilet på grillen",
+    sidedish: "Kogte kartofler med persillesovs",
+    note: "☀️ Grillvejr! 23°C. Filet på grillbakke med smør og citron — fisk-fredag på grillen. Rema-tilbud 45 kr.",
     color: "#f5f5f5",
     accent: "#424242",
     naering: {
@@ -148,29 +148,30 @@ const madplan = [
     recipe: {
       tid: "30 min",
       svaerhed: "Let",
-      intro: "Klassisk rødspætter eller havkatfilet til familien. Serveres med kogte kartofler + persillesovs.",
+      intro: "Klassisk rødspættefilet på grillen til familien. Serveres med kogte kartofler med persillesovs.",
       trin: [
-        "Forbered rødspætter eller havkatfilet efter opskrift.",
-        "Tilbered kogte kartofler + persillesovs som tilbehør.",
+        "Forbered rødspættefilet på grillen efter opskrift.",
+        "Tilbered kogte kartofler med persillesovs som tilbehør.",
         "Smag til med salt og peber.",
         "Server og nyd måltidet! 🍽️",
       ],
     },
     ingredients: [
-      { name: "Rødspættefilet eller havkatfilet (~600g)", qty: "", url: "https://www.bilkatogo.dk/s?query=rødspættefilet+eller+havkatfilet+(~600g)" },
+      { name: "Rødspættefilet (~600g)", qty: "", url: "https://www.bilkatogo.dk/s?query=rødspættefilet+(~600g)" },
       { name: "kartofler", qty: "", url: "https://www.bilkatogo.dk/s?query=kartofler" },
       { name: "persille", qty: "", url: "https://www.bilkatogo.dk/s?query=persille" },
       { name: "smør", qty: "", url: "https://www.bilkatogo.dk/s?query=smør" },
       { name: "salt", qty: "", url: "https://www.bilkatogo.dk/s?query=salt" },
+      { name: "citron", qty: "", url: "https://www.bilkatogo.dk/s?query=citron" },
     ],
   },
   {
     day: "Lørdag",
-    dato: "04.07",
+    dato: "05.07",
     emoji: "🍽️",
-    meal: "Pulled pork med coleslaw",
-    sidedish: "Bådekartofler + pickling",
-    note: "⚠️ FLEKSIBEL HVIS REJSE: Rema-tilbud 69 kr. Weekendmad — kan være helt weekend-hyggelig. Hvis de rejser, kan være aftensmad før afgang eller skipped.",
+    meal: "Spareribs på grillen",
+    sidedish: "Bådekartofler",
+    note: "☀️ Grillvejr! 19°C, næsten vindstille. Klassiske spareribs — mariner natten over, grill 1,5 time ved lav varme.",
     color: "#f5f5f5",
     accent: "#424242",
     naering: {
@@ -180,30 +181,31 @@ const madplan = [
     recipe: {
       tid: "30 min",
       svaerhed: "Let",
-      intro: "Klassisk pulled pork med coleslaw til familien. Serveres med bådekartofler + pickling.",
+      intro: "Klassisk spareribs på grillen til familien. Serveres med bådekartofler.",
       trin: [
-        "Forbered pulled pork med coleslaw efter opskrift.",
-        "Tilbered bådekartofler + pickling som tilbehør.",
+        "Forbered spareribs på grillen efter opskrift.",
+        "Tilbered bådekartofler som tilbehør.",
         "Smag til med salt og peber.",
         "Server og nyd måltidet! 🍽️",
       ],
     },
     ingredients: [
-      { name: "Pulled pork (~800g", qty: "", url: "https://www.bilkatogo.dk/s?query=pulled+pork+(~800g" },
-      { name: "evt. frossen)", qty: "", url: "https://www.bilkatogo.dk/s?query=evt.+frossen)" },
-      { name: "coleslaw (hvidkål", qty: "", url: "https://www.bilkatogo.dk/s?query=coleslaw+(hvidkål" },
-      { name: "gulerod", qty: "", url: "https://www.bilkatogo.dk/s?query=gulerod" },
-      { name: "mayo-dressing)", qty: "", url: "https://www.bilkatogo.dk/s?query=mayo-dressing)" },
-      { name: "hjemmestegt eller købt", qty: "", url: "https://www.bilkatogo.dk/s?query=hjemmestegt+eller+købt" },
+      { name: "Spareribs (~1", qty: "", url: "https://www.bilkatogo.dk/s?query=spareribs+(~1" },
+      { name: "2 kg)", qty: "", url: "https://www.bilkatogo.dk/s?query=2+kg)" },
+      { name: "BBQ-marinade", qty: "", url: "https://www.bilkatogo.dk/s?query=bbq-marinade" },
+      { name: "hvidløg", qty: "", url: "https://www.bilkatogo.dk/s?query=hvidløg" },
+      { name: "paprika", qty: "", url: "https://www.bilkatogo.dk/s?query=paprika" },
+      { name: "sojasauce", qty: "", url: "https://www.bilkatogo.dk/s?query=sojasauce" },
+      { name: "honning", qty: "", url: "https://www.bilkatogo.dk/s?query=honning" },
     ],
   },
   {
     day: "Søndag",
-    dato: "05.07",
+    dato: "06.07",
     emoji: "🥩",
     meal: "Svinemørbrad i flødesovs",
     sidedish: "Ris",
-    note: "⚠️ FLEKSIBEL HVIS REJSE: Mørbrad fra Rema 25 kr/kg. Klassisk søndagsmad. Hvis de er i Østrig, bruges denne ikke — så fjernes fra plan.",
+    note: "Klassisk søndagsmad. Mørbrad fra Rema 25 kr/kg. Simrer 30 min — nemt og lækkert.",
     color: "#fff5ee",
     accent: "#bf360c",
     naering: {
@@ -223,10 +225,12 @@ const madplan = [
     },
     ingredients: [
       { name: "Svinemørbrad (~700g)", qty: "", url: "https://www.bilkatogo.dk/s?query=svinemørbrad+(~700g)" },
-      { name: "créme fraîche", qty: "", url: "https://www.bilkatogo.dk/s?query=créme+fraîche" },
+      { name: "crème fraîche", qty: "", url: "https://www.bilkatogo.dk/s?query=crème+fraîche" },
       { name: "rødvin", qty: "", url: "https://www.bilkatogo.dk/s?query=rødvin" },
       { name: "løg", qty: "", url: "https://www.bilkatogo.dk/s?query=løg" },
-      { name: "thymian", qty: "", url: "https://www.bilkatogo.dk/s?query=thymian" },
+      { name: "timian", qty: "", url: "https://www.bilkatogo.dk/s?query=timian" },
+      { name: "salt", qty: "", url: "https://www.bilkatogo.dk/s?query=salt" },
+      { name: "peber", qty: "", url: "https://www.bilkatogo.dk/s?query=peber" },
     ],
   }
 ]
